@@ -57,5 +57,6 @@ Geodjango_charts/
 ##Configuración del proyecto##  
 Hasta éste punto habremos creado nuestra app ahora debemos realizar unas pequeñas configuraciones en el archivo **settings.py** con el fin de tener la configuración lista para nuestra app.  
 Abrimos el archivo settings.py y buscamos la sección de installed apps  
-![my image](../img/installed_apps_prev.png)  
+![my image](../img/installed_apps_prev.png)
+.
 
