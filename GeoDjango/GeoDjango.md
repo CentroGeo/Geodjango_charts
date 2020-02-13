@@ -8,7 +8,9 @@ El objetivo de éste curso es aprender a montar una aplicación web con dejango 
 ##Creación de proyecto  
 **django-admin startproject prueba**  
 .  
-![my image](../img/01.png)  
+<p align="center"> 
+<img src="../img/img01.png">
+</p>   
 Se generará una carpeta con el nombres del proyecto y al abrirla encontraremos la siguiente estructura:  
 .
 ```
@@ -46,7 +48,9 @@ Geodjango_charts/
 ##Configuración del proyecto  
 Hasta éste punto habremos creado nuestra app ahora debemos realizar unas pequeñas configuraciones en el archivo **settings.py** con el fin de tener la configuración lista para nuestra app.  
 Abrimos el archivo settings.py y buscamos la sección de installed apps  
-![my image](../img/installed_apps_prev.png)  
+<p align="center"> 
+<img src="../img/installed_apps_prev.png">
+</p> 
 
 Dado que estaremos trabajando con datos espaciales, tendremos que usar la extensión espacial de **django** la cual se puede consultar en el siguiente link **https://docs.djangoproject.com/en/3.0/ref/contrib/gis/**  
 <p align="center"> 
@@ -55,10 +59,10 @@ Dado que estaremos trabajando con datos espaciales, tendremos que usar la extens
 Con ésto estamos usando la extensión espacial y de paso incorporando la herramienta de leaflet para django, leaflet es una herramienta de **Javascript** para la creación de mapas interactivos, se puede encontrar su documentación en el siguiente link **https://leafletjs.com/reference-1.6.0.html**.  
 Una vez hecho lo anterior procedemos a indicar la ubicación de la carpeta donde estará nuestros templates de html por lo que la parte de templates deberá quedar de la siguiente forma:  
 
-<p align="rigth"> 
+<p align="center"> 
 <img src="../img/prev_templates.png">
 </p>  
-<p align="left"> 
+<p align="center"> 
 <img src="../img/post_templates.png">
 </p>  
 
