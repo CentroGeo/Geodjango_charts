@@ -9,7 +9,7 @@ El objetivo de éste curso es aprender a montar una aplicación web con dejango 
 **django-admin startproject prueba**  
 .  
 <p align="center"> 
-<img src="../img/img01.png">
+<img src="../img/01.png">
 </p>   
 Se generará una carpeta con el nombres del proyecto y al abrirla encontraremos la siguiente estructura:  
 .
