@@ -1,7 +1,7 @@
-#Introducción:  
+#Introducción:#  
 Django es un framework de aplicaciones web  de código abierto para el lenguaje  Python, dada la tendencia actual Python empieza a ser uno de los lenguajes mas usados hoy en día, la tendencia va la alza por su facilidad de entendimiento y la comunidad del lenguaje.  
 
-##Objetivo  
+##Objetivo##  
 El objetivo de éste curso es aprender a montar una aplicación web con dejango y  las herramientas Leaflet y ChartJs.  
 ##Activación del proyecto  
 **conda activate entorno**  
@@ -74,9 +74,18 @@ Procedemos a configurar la base de datos dado que por defecto django usa sqlite3
 <p align="center"> 
 <img src="../img/post_db.png">
 </p> 
+A nuestra base de datos la llamaremos accidentes, pueden usar el nombre que quieran pero debe coincidir con el nombre de la base que crearon al igual que la contraseña.  
+Como requisito debemos instalar psycopg2 o tenerlo instalado, éste es el controlador para realizar la conexión a Postgres, recordemos que todo debe instalarse en el entorno de conda y através de **conda install package**.  
+Ahora solo nos queda configurar para poder cargar archivos estáticos, es decir archivos js, img, css que vamos  a requerir más adelante.  
 
-Como requisito debemos instalar psycopg2 o tenerlo instalado, éste es el controlador para realizar la conexión a Postgres, recordemos que todo debe instalarse en el entorno de conda y através de conda install.  
+<p align="center"> 
+<img src="../img/static_conf.png">
+</p> 
 
+Con ésto tenemos la configuración básica de nuestra aplicación hecha, aunque aún podemos modificarle cosas se dejará para más adelante.
+
+Antes de continuar es importante mencionar el concepto de **json y geojson**  
+**Json** por sus siglas JavaScript Object Notation (notación de objetos javascritp) y siendo **Geojson** un tipo de json particular para datos espaciales, para más información consultar **https://www.json.org/json-es.html**  
 
 
 
