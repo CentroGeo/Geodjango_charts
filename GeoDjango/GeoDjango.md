@@ -64,7 +64,18 @@ Una vez hecho lo anterior procedemos a indicar la ubicación de la carpeta donde
 </p>  
 <p align="center"> 
 <img src="../img/post_templates.png">
-</p>  
+</p> 
+Como paso previo deberemos haber creado una base de datos en posgtres y crear la extensión espacial de postgis en ella, no importa que aun no tenga tablas.  
+Procedemos a configurar la base de datos dado que por defecto django usa sqlite3 por lo que la configuración debe quedar de la siguiente forma:  
+
+<p align="center"> 
+<img src="../img/prev_db.png">
+</p>
+<p align="center"> 
+<img src="../img/post_db.png">
+</p> 
+
+Como requisito debemos instalar psycopg2 o tenerlo instalado, éste es el controlador para realizar la conexión a Postgres, recordemos que todo debe instalarse en el entorno de conda y através de conda install.  
 
 
 
