@@ -10,39 +10,31 @@ El objetivo de éste curso es aprender a montar una aplicación web con dejango 
 .  
 ![my image](../img/01.png)  
 Se generará una carpeta con el nombres del proyecto y al abrirla encontraremos la siguiente estructura:  
-.  
-|-- manage.py  
-|  
-|-- prueba  
- 
+.
+```
+Geodjango_charts/
+└── prueba/  
+	└── manage.py   
+	└── prueba/  
+```
+
 De ésta forma tendremos iniciado nuestro proyecto, ahora deberemos crear nuestra app de la siguiente forma:  
 **python manage.py createapp app**  
 Así habremos creado nuestra primera app, entremos a la carpeta y crearemos una carpeta dentro llamada vistaPrincipal y moveremos todos los archivos dentro de app a ella.  
 La estructura debería quedar de la siguiente forma:  
-.  
-|
-+-- prueba/         
-|+------- _init_.py  
-|		+-- _pycache_  
-|		+-- settings.py    
-|		+-- urls.py  
-|		+-- wsgi.py  
-+-- manage.py        
-+-- app/                                
-|   +-- vistaPrincipal/  
-|		+-- migrations/  
-|		+-- admin.py   
-|		+-- app.py  
-|		+-- models.py  
-|		+-- tests.py  
-|		+-- views.py  
-|   +-- _init_.py
+.
 ```
 Geodjango_charts/
 └── prueba/
    ├── manage.py
    ├── app/
        └── vistaPrincipal/
+       		└── migrations/
+       		└── admin.py
+       		└── app.py
+       		└── models.py
+       		└── tests.py
+       		└── views.py
        └── __init__.py
    ├── prueba/
        └── __init__.py
@@ -50,8 +42,6 @@ Geodjango_charts/
        └── settings.py
        └── urls.py
        └── wsgi.py
-
-
 ```
 
 ##Configuración del proyecto##  
