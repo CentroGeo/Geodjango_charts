@@ -42,11 +42,15 @@ Geodjango_charts/
        └── settings.py
        └── urls.py
        └── wsgi.py
-```
-
-##Configuración del proyecto##  
+```  
+##Configuración del proyecto  
 Hasta éste punto habremos creado nuestra app ahora debemos realizar unas pequeñas configuraciones en el archivo **settings.py** con el fin de tener la configuración lista para nuestra app.  
 Abrimos el archivo settings.py y buscamos la sección de installed apps  
 ![my image](../img/installed_apps_prev.png)
-.
+.  
+Dado que estaremos trabajando con datos espaciales, tendremos que usar la extensión espacial de **django** la cual se puede consultar en el siguiente link **https://docs.djangoproject.com/en/3.0/ref/contrib/gis/**  
+<p align="center"> 
+<img src="../img/installed_apps_post.png">
+</p>
+
 
