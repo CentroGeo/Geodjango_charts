@@ -6,9 +6,5 @@ El objetivo de éste curso es aprender a montar una aplicación web con dejango 
 
 ##Creación de proyecto  
 **django-admin startproject prueba**
-<br>
+.  
 ![my image](../img/01.png)
-img[src*='#center'] {
-    display: block;
-    margin: auto;
-}
