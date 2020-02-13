@@ -5,5 +5,7 @@ Django es un framework de aplicaciones web  de código abierto para el lenguaje 
 El objetivo de éste curso es aprender a montar una aplicación web con dejango y  las herramientas Leaflet y ChartJs.
 
 ##Creación de proyecto  
-**django-admin startproject prueba**    
+**django-admin startproject prueba**
+<center>
 ![](../img/01.png)
+</center>
