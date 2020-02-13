@@ -56,11 +56,11 @@ Con ésto estamos usando la extensión espacial y de paso incorporando la herram
 Una vez hecho lo anterior procedemos a indicar la ubicación de la carpeta donde estará nuestros templates de html por lo que la parte de templates deberá quedar de la siguiente forma:  
 
 <p align="rigth"> 
-<img src="../img/installed_app_prev.png">
-</p>
+<img src="../img/prev_templates.png">
+</p>  
 <p align="left"> 
-<img src="../img/installed_app_post.png">
-</p>
+<img src="../img/post_templates.png">
+</p>  
 
 
 
