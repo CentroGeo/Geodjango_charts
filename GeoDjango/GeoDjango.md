@@ -6,4 +6,4 @@ El objetivo de éste curso es aprender a montar una aplicación web con dejango 
 
 ##Creación de proyecto  
 **django-admin startproject prueba**
-![](images/01.png)
+![](../img/01.png)
