@@ -36,8 +36,25 @@ La estructura debería quedar de la siguiente forma:
 |		+-- models.py  
 |		+-- tests.py  
 |		+-- views.py  
-|   +-- _init_.py  
-##Configuración del proyecto
+|   +-- _init_.py
+```
+Geodjango_charts/
+└── prueba/
+   ├── manage.py
+   ├── app/
+       └── vistaPrincipal/
+       └── __init__.py
+   ├── prueba/
+       └── __init__.py
+       └── __pycache__
+       └── settings.py
+       └── urls.py
+       └── wsgi.py
+
+
+```
+
+##Configuración del proyecto##  
 Hasta éste punto habremos creado nuestra app ahora debemos realizar unas pequeñas configuraciones en el archivo **settings.py** con el fin de tener la configuración lista para nuestra app.  
 Abrimos el archivo settings.py y buscamos la sección de installed apps  
 ![my image](../img/installed_apps_prev.png)  
