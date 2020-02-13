@@ -8,4 +8,9 @@ El objetivo de éste curso es aprender a montar una aplicación web con dejango 
 ##Creación de proyecto  
 **django-admin startproject prueba**  
 .  
-![my image](../img/01.png)
+![my image](../img/01.png)  
+Se generará una carpeta con el nombres del proyecto y al abrirla encontraremos la siguiente estructura:  
+|  
+-- **manage.py**
+|  
+- **prueba/**
