@@ -22,22 +22,22 @@ La estructura debería quedar de la siguiente forma:
 .  
 |
 +-- prueba/         
-|		+-- _init_.py  
+|+------- _init_.py  
 |		+-- _pycache_  
-|		+-- settings.py  
-|		+-- urls.py  s
+|		+-- settings.py    
+|		+-- urls.py  
 |		+-- wsgi.py  
-|   
-+-- manage.py      
-+-- app/                              
++-- manage.py        
++-- app/                                
 |   +-- vistaPrincipal/  
-|		+-- migrations/
+|		+-- migrations/  
 |		+-- admin.py   
 |		+-- app.py  
 |		+-- models.py  
 |		+-- tests.py  
-|		+-- views.py
+|		+-- views.py  
 |   +-- _init_.py  
+##Configuración del proyecto
 Hasta éste punto habremos creado nuestra app ahora debemos realizar unas pequeñas configuraciones en el archivo **settings.py** con el fin de tener la configuración lista para nuestra app.  
 Abrimos el archivo settings.py y buscamos la sección de installed apps  
 ![my image](../img/installed_apps_prev.png)  
