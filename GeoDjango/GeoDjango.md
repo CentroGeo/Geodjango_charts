@@ -10,9 +10,9 @@ El objetivo de éste curso es aprender a montar una aplicación web con dejango 
 .  
 ![my image](../img/01.png)  
 Se generará una carpeta con el nombres del proyecto y al abrirla encontraremos la siguiente estructura:  
+.. code::
 .
-+-- _config.yml
-+-- _drafts
-.   
-+-- _manage.py  
-+-- _prueba  
+|-- manage.py
+|  
+|-- prueba
+
