@@ -1,11 +1,11 @@
-#Introducción:#  
+# Introducción: #  
 Django es un framework de aplicaciones web  de código abierto para el lenguaje  Python, dada la tendencia actual Python empieza a ser uno de los lenguajes mas usados hoy en día, la tendencia va la alza por su facilidad de entendimiento y la comunidad del lenguaje.  
 
-##Objetivo##  
+## Objetivo ##  
 El objetivo de éste curso es aprender a montar una aplicación web con dejango y  las herramientas Leaflet y ChartJs.  
-##Activación del proyecto  
+## Activación del proyecto ##  
 **conda activate entorno**  
-##Creación de proyecto  
+## Creación de proyecto ## 
 **django-admin startproject prueba**  
 .  
 <p align="center"> 
@@ -45,7 +45,7 @@ Geodjango_charts/
        └── urls.py
        └── wsgi.py
 ```  
-##Configuración del proyecto  
+## Configuración del proyecto ##  
 Hasta éste punto habremos creado nuestra app ahora debemos realizar unas pequeñas configuraciones en el archivo **settings.py** con el fin de tener la configuración lista para nuestra app.  
 Abrimos el archivo settings.py y buscamos la sección de installed apps  
 <p align="center"> 
@@ -56,7 +56,8 @@ Dado que estaremos trabajando con datos espaciales, tendremos que usar la extens
 <p align="center"> 
 <img src="../img/installed_app_post.png">
 </p>  
-Con ésto estamos usando la extensión espacial y de paso incorporando la herramienta de leaflet para django, leaflet es una herramienta de **Javascript** para la creación de mapas interactivos, se puede encontrar su documentación en el siguiente link **https://leafletjs.com/reference-1.6.0.html**.  
+Con ésto estamos usando la extensión espacial y de paso incorporando la herramienta de leaflet para django, leaflet es una herramienta de **Javascript** para la creación de mapas interactivos, se puede encontrar su documentación en el siguiente link **https://leafletjs.com/reference-1.6.0.html**.
+**Nota** Se pueden agregar tantas apps queramos crear, solo debemos agregarla dentro de installed apps como le hicimos con la de **app**.
 Una vez hecho lo anterior procedemos a indicar la ubicación de la carpeta donde estará nuestros templates de html por lo que la parte de templates deberá quedar de la siguiente forma:  
 
 <p align="center"> 
@@ -87,5 +88,10 @@ Con ésto tenemos la configuración básica de nuestra aplicación hecha, aunque
 Antes de continuar es importante mencionar el concepto de **json y geojson**  
 **Json** por sus siglas JavaScript Object Notation (notación de objetos javascritp) y siendo **Geojson** un tipo de json particular para datos espaciales, para más información consultar **https://www.json.org/json-es.html**  
 
-
-
+## ¿Qué son los modelos django ##
+Introduciremos el concepto de ORM (Object Relational Mapping) Objecto Modelo Relación en español, es un patrón de diseño que nos permite manejar las tablas de la base de datos como clases en el lenguaje, en nuestro caso Python, django internamente maneja un mapeo entre nuestras tablas en la base de datos y clases en python, es importante que la manupulación hacia las tablas de la base de datos es mejor hacerlo através del ORM que con ejecución de querys directamente a la base de datos por temas de seguridad.
+<p align="center"> 
+<img src="../img/Django-models.png">
+</p> 
+### Cómo definir modelos en python###
+Debemos irnos 
