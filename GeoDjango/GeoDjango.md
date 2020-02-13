@@ -10,9 +10,24 @@ El objetivo de éste curso es aprender a montar una aplicación web con dejango 
 .  
 ![my image](../img/01.png)  
 Se generará una carpeta con el nombres del proyecto y al abrirla encontraremos la siguiente estructura:  
-.. code::
 .
-|-- manage.py
+|-- manage.py  
 |  
-|-- prueba
+|-- prueba  
+.  
+De ésta forma tendremos iniciado nuestro proyecto, ahora deberemos crear nuestra app de la siguiente forma:  
+**python manage.py createapp app**  
+Así habremos creado nuestra primera app, entremos a la carpeta y crearemos una carpeta dentro llamada vistaPrincipal y moveremos todos los archivos dentro de app a ella.  
+La estructura debería quedar de la siguiente forma:  
+.  
+|
++-- prueba/                                  
+|   
++-- manage.py      
++-- app/                              
+|   +-- vistaPrincipal/  
+|		+--archivos/  
+|   +-- _init_.py  
+  
+  
 
