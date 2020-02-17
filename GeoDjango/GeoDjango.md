@@ -231,6 +231,6 @@ Con lo que ahora podremos visualizar lo siguiente en nuestro navegador:
 <p align="center"> 
 <img src="../img/ejemplo-html.png">
 </p>
-
+.
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2019, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
