@@ -123,5 +123,39 @@ class Datos(models.Model):
     identidad = models.CharField(max_length = 100)	
 ```  
 Como podremos observar nuestra variable id de tipo entero será nuestra llave en la tabla, posteriormente lo más importante a notar es la variable geom la cual funge como la representación de la geometría en nuestro caso es de tipo punto aunque podríamos tener otras como poligono o línea. Es **recomendable** más no obligatorio que se defina el modelo para cada app en su propio models.py
-Aunque resulte un poco obvio que IntegerField() y CharField() sean para campos de tipo entero y cadena respectivamente, no está de más leer o tener a la mano la documentación **https://docs.djangoproject.com/en/3.0/ref/contrib/gis/model-api/**, **https://docs.djangoproject.com/en/3.0/topics/db/models/**
+Aunque resulte un poco obvio que IntegerField() y CharField() sean para campos de tipo entero y cadena respectivamente, no está de más leer o tener a la mano la documentación **https://docs.djangoproject.com/en/3.0/ref/contrib/gis/model-api/**, **https://docs.djangoproject.com/en/3.0/topics/db/models/**.  
+Dejaremos pendientes la parte de las relaciones entre tablas para más adelante, de momento no son necesarias..
+
+## Rutas **URL** y vistas ##  
+Para ésto es importante mencionar qué es HTTP (Protocolo de Transferencia de Hipertexto), es un protocolo de transferencia de información hipermedia para Internet, diseñado para la comunicación entre navegadores y servidores web, como lo que estaremos montando es un servidor web.  
+Nos iremos al archivo **views.py** dentro de app por lo que tendremos el siguiente código:  
+```python
+from django.shortcuts import render
+
+# Create your views here.
+```  
+Importaremos las siguientes bibliotecas:  
+```python
+from django.shortcuts import render
+import json
+from geojson import Point, Feature, FeatureCollection, dump
+import pandas as pd
+import geopandas
+
+from django.contrib.gis.geos import Polygon, Point, MultiPoint, GeometryCollection
+from shapely.geometry import Point, mapping, shape
+from app.vistaPrincipal.forms import ClienteForm
+from .models import * 
+from django.views.decorators.csrf import csrf_exempt
+
+from django.http import *
+
+from django.core.serializers import serialize
+from django.core  import *
+#Create your views here
+```  
+Entonces definiremos nuestra ruta para el index, el cual siempre funge como la página principal para ésto mencionaremos brevemente los dos métodos **HTTP** más comunes:  
+1.  Hola
+2.  Prueba
+
 
