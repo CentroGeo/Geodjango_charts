@@ -193,7 +193,39 @@ si vamos a nuestro navegador con la ruta "http://127.0.0.1:8000/admin/" obtendre
 </p>  
 
 ## Creación de nuestro archivo home.html
-
-
+Debemos crear las carpetas static y templates por convención se deben usar esos nombres, con lo cual nuestro proyecto debe tener la siguiente estructura:  
+```
+Geodjango_charts/
+└── prueba/
+   ├── manage.py
+   ├── app/
+       └── vistaPrincipal/
+       		└── migrations/
+       		└── admin.py
+       		└── app.py
+       		└── models.py
+       		└── tests.py
+       		└── views.py
+       		└── urls.py
+       └── __init__.py
+   ├── prueba/
+       └── __init__.py
+       └── __pycache__
+       └── settings.py
+       └── urls.py
+       └── wsgi.py
+    ├── templates/
+    	└── primeraVista
+    		└──home.html
+    ├── static/
+    	└── img/
+    	└── js/
+    	└── css/
+```
+agregar lo de app.vistaPrincipal.url  
+Ahora dentro de la carpeta templates/primeraVista creamos un archivo **home.html** con la siguiente estructura básica de html5  
+<p align="center"> 
+<img src="../img/prev_home_html.png">
+</p> 
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2019, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
