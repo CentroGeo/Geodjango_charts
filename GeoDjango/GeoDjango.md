@@ -223,15 +223,19 @@ Geodjango_charts/
 ```
 agregar lo de app.vistaPrincipal.url  
 Ahora dentro de la carpeta templates/primeraVista creamos un archivo **home.html** con la siguiente estructura básica de html5  
+
 <p align="center"> 
 <img src="../img/prev_home_html.png">
 </p>  
+
 En donde **head** es donde haremos todos los imports de las bibliotecas externas y archivos css.
 Con lo que ahora podremos visualizar lo siguiente en nuestro navegador:  
+
 <p align="center"> 
 <img src="../img/ejemplo-html.png">
-</p> 
-**Hasta éste punto ya tenemos nuestro template listo para montar nuestro mapa ** por lo que procedemos a importar leaflet**, pero antes haremos el import de las cosas necesarias.  
+</p>
+
+**Hasta éste punto ya tenemos nuestro template listo para montar nuestro mapa** por lo que procedemos a importar leaflet, pero antes haremos el import de las cosas necesarias.  
 
 ```html
     <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
