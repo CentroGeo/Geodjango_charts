@@ -1,5 +1,5 @@
 # Geodjango_charts
-**"https://centrogeo.github.io/Geodjango_charts/GeoDjango_charts/GeoDjango.html"**
+[Curso](https://centrogeo.github.io/Geodjango_charts/GeoDjango_charts/GeoDjango.html)
 
 Prerequisitos:  
 **Python versión 3.6 https://www.python.org/downloads/release/python-370/**  
