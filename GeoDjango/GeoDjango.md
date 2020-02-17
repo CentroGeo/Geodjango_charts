@@ -261,8 +261,9 @@ Con lo que ahora podremos visualizar lo siguiente en nuestro navegador:
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js" integrity="sha256-CfcERD4Ov4+lKbWbYqXD6aFM9M51gN4GUEtDhkWABMo=" crossorigin="anonymous"></script>
   <!--JS Propios-->
     <script src="{% static 'js/datos.js' %}"></script>
-```
+```  
 
+Crearemos un div general dentro del cual estárá todo el contenido (se recomienda leer un poco acerca del DOM de los navegadores para su mejor entendimiento), el cual tendrá una clase grid-container, 
 
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2019, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
