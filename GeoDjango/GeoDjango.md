@@ -144,7 +144,6 @@ import geopandas
 
 from django.contrib.gis.geos import Polygon, Point, MultiPoint, GeometryCollection
 from shapely.geometry import Point, mapping, shape
-from app.vistaPrincipal.forms import ClienteForm
 from .models import * 
 from django.views.decorators.csrf import csrf_exempt
 
@@ -226,6 +225,7 @@ agregar lo de app.vistaPrincipal.url
 Ahora dentro de la carpeta templates/primeraVista creamos un archivo **home.html** con la siguiente estructura básica de html5  
 <p align="center"> 
 <img src="../img/prev_home_html.png">
-</p> 
+</p>  
+En donde **head** es donde haremos todos los imports de las bibliotecas externas y archivos css, 
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2019, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
