@@ -157,7 +157,22 @@ from django.core  import *
 Entonces definiremos nuestra ruta para el index, el cual siempre funge como la página principal para ésto mencionaremos brevemente los dos métodos **HTTP** más comunes:  
 *   GET El método GET  solicita una representación de un recurso específico. Las peticiones que usan el método GET sólo deben recuperar datos.    
 *   POST  El método POST se utiliza para enviar una entidad a un recurso en específico, causando a menudo un cambio en el estado o efectos secundarios en el servidor.    
-# Definiendo INDEXs
+
+Procedemos a definir el index (home) de la siguiente manera:
+```python
+@csrf_exempt
+
+def index(request):
+    if request.method == 'GET':
+        return render(request,'primeraVista/home.html')
+    elif request.method == 'POST':
+        
+        return HttpResponseForbidden()
+```  
+De momento no necesitamos definir un comportamiento para el método POST hacia nuestro index por lo que  usamos 403 de http para denegar la petición, solo nos interesa mandar peticiones de tipo GET al servidor para renderizar el html de la página principal, aunque la convención es a la primera vista llamarla **index.html**, posteriormente debemos ir a nuestro archivo urls.py dentro de la carpeta prueba y deberá verse de la siguiente forma:  
+<p align="center"> 
+<img src="../img/prev_urls.png">
+</p>  
 
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2019, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
