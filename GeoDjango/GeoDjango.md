@@ -155,7 +155,8 @@ from django.core  import *
 #Create your views here
 ```  
 Entonces definiremos nuestra ruta para el index, el cual siempre funge como la página principal para ésto mencionaremos brevemente los dos métodos **HTTP** más comunes:  
-1.  Hola
-2.  Prueba
+1.  **GET** El método GET  solicita una representación de un recurso específico. Las peticiones que usan el método GET sólo deben recuperar datos.
+2.  Prueba  El método POST se utiliza para enviar una entidad a un recurso en específico, causando a menudo un cambio en el estado o efectos secundarios en el servidor.
 
-
+# Referencias
+pandoc --filter pandoc-citeproc input.md --bibliography=referencias.bib --csl==estilo.csl -o output.pdf
