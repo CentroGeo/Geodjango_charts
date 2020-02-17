@@ -173,6 +173,21 @@ De momento no necesitamos definir un comportamiento para el método POST hacia n
 <p align="center"> 
 <img src="../img/prev_urls.png">
 </p>  
+Como podremos observar solo tenemos la ruta para el admin propio de django, ahora en éste arreglo debemos definir la ruta para cada ruta que tengamos en nuestro servidor django, de 
+momento solo tendremos la que contendrá el mapa en leaflet, por lo que deberemos tener el siguiente código:
+
+```python
+from django.contrib import admin
+from django.urls import path
+from django.conf.urls import url ,include
+from app.vistaPrincipal.urls import *
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', home),
+]
+```
+## Creación de nuestro archivo home.html
+
 
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2019, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
