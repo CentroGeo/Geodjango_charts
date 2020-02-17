@@ -232,7 +232,8 @@ Con lo que ahora podremos visualizar lo siguiente en nuestro navegador:
 <img src="../img/ejemplo-html.png">
 </p> 
 ** Hasta éste punto ya tenemos nuestro template listo para montar nuestro mapa ** por lo que procedemos a importar leaflet **, pero antes haremos el import de las cosas necesarias.  
-```HTML
+
+```html
     <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Condensed|IBM+Plex+Mono|PT+Sans|Titillium+Web&display=swap" rel="stylesheet">
@@ -255,7 +256,8 @@ Con lo que ahora podremos visualizar lo siguiente en nuestro navegador:
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js" integrity="sha256-J2sc79NPV/osLcIpzL3K8uJyAD7T5gaEFKlLDM18oxY=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js" integrity="sha256-CfcERD4Ov4+lKbWbYqXD6aFM9M51gN4GUEtDhkWABMo=" crossorigin="anonymous"></script>
   <!--JS Propios-->
-  <script src="{% static 'js/datos.js' %}"></script>
+    <script src="{% static 'js/datos.js' %}"></script>
+
 
 
 ```
