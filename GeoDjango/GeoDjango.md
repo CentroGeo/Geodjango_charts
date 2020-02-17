@@ -222,7 +222,7 @@ Geodjango_charts/
     	└── css/
 ```
 agregar lo de app.vistaPrincipal.url  
-Ahora dentro de la carpeta templates/primeraVista creamos un archivo ** home.html ** con la siguiente estructura básica de html5  
+Ahora dentro de la carpeta templates/primeraVista creamos un archivo **home.html** con la siguiente estructura básica de html5  
 <p align="center"> 
 <img src="../img/prev_home_html.png">
 </p>  
@@ -231,7 +231,7 @@ Con lo que ahora podremos visualizar lo siguiente en nuestro navegador:
 <p align="center"> 
 <img src="../img/ejemplo-html.png">
 </p> 
-** Hasta éste punto ya tenemos nuestro template listo para montar nuestro mapa ** por lo que procedemos a importar leaflet **, pero antes haremos el import de las cosas necesarias.  
+**Hasta éste punto ya tenemos nuestro template listo para montar nuestro mapa ** por lo que procedemos a importar leaflet**, pero antes haremos el import de las cosas necesarias.  
 
 ```html
     <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
@@ -257,10 +257,8 @@ Con lo que ahora podremos visualizar lo siguiente en nuestro navegador:
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js" integrity="sha256-CfcERD4Ov4+lKbWbYqXD6aFM9M51gN4GUEtDhkWABMo=" crossorigin="anonymous"></script>
   <!--JS Propios-->
     <script src="{% static 'js/datos.js' %}"></script>
-
-
-
 ```
+
 
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2019, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
