@@ -2,7 +2,7 @@
 Django es un framework de aplicaciones web  de código abierto para el lenguaje  Python, dada la tendencia actual Python empieza a ser uno de los lenguajes mas usados hoy en día, la tendencia va la alza por su facilidad de entendimiento y la comunidad del lenguaje.  
 
 ## Objetivo ##  
-El objetivo de éste curso es aprender a montar una aplicación web con dejango y  las herramientas Leaflet y ChartJs.  
+El objetivo de éste curso es aprender a montar una aplicación web con Django y  las herramientas Leaflet y ChartJs.  
 ## Activación del proyecto ##  
 **conda activate entorno**  
 ## Creación de proyecto ## 
@@ -226,6 +226,11 @@ Ahora dentro de la carpeta templates/primeraVista creamos un archivo **home.html
 <p align="center"> 
 <img src="../img/prev_home_html.png">
 </p>  
-En donde **head** es donde haremos todos los imports de las bibliotecas externas y archivos css, 
+En donde **head** es donde haremos todos los imports de las bibliotecas externas y archivos css.
+Con lo que ahora podremos visualizar lo siguiente en nuestro navegador:  
+<p align="center"> 
+<img src="../img/ejemplo-html.png">
+</p>
+
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2019, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
