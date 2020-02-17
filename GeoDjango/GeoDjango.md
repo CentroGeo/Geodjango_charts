@@ -185,12 +185,13 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home),
 ]
+```
 Entre las comillas debemos escribir la ruta que deberá tomar, cuando dejamos las comillas en vacío le estamos indicando que la ruta por defecto es "http://127.0.0.1:8000" y por ejemplo
 si vamos a nuestro navegador con la ruta "http://127.0.0.1:8000/admin/" obtendremos lo siguiente:  
 <p align="center"> 
 <img src="../img/prev_django.png">
 </p>  
-```
+
 ## Creación de nuestro archivo home.html
 
 
