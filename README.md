@@ -9,3 +9,4 @@ Prerequisitos:
 **Postgis 2.4.4 https://postgis.net/2018/04/06/postgis-patches/**  
 **Anaconda for python 3.7 https://www.anaconda.com/distribution/#download-section**  
 
+"https://centrogeo.github.io/Geodjango_charts/GeoDjango_charts/GeoDjango.html"
