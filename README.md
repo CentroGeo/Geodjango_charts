@@ -10,6 +10,6 @@ Prerequisitos:
 **Anaconda for python 3.7 https://www.anaconda.com/distribution/#download-section**  
 
  #### Autores
- Karime González Zuccolotto
- Rosado Cabrera Diego
- Navarrete Puebla Alexis
+ Karime González Zuccolotto  
+ Rosado Cabrera Diego  
+ Navarrete Puebla Alexis  
