@@ -172,6 +172,7 @@ De momento no necesitamos definir un comportamiento para el método POST hacia n
 <p align="center"> 
 <img src="../img/prev_urls.png">
 </p>  
+
 Como podremos observar solo tenemos la ruta para el admin propio de django, ahora en éste arreglo debemos definir la ruta para cada ruta que tengamos en nuestro servidor django, de 
 momento solo tendremos la que contendrá el mapa en leaflet, por lo que deberemos tener el siguiente código en nuestro archivo **prueba/urls.py**:
 
@@ -200,15 +201,18 @@ Entre las comillas debemos escribir la ruta que deberá tomar, cuando dejamos la
 Previo a iniciar por primera vez nuestro servidor debemos aplicar las **migrations** las cuales son la forma en la que django aplica los cambios a los modelos definidos y con el comando **makemigrations** se crean nuevas migraciones sobre la base de datos, es por ello que deberemos ejecutar los siguientes comandos:  
 **python manage.py migrate**
 <p align="center"> 
-<img src="../img/prev_migrations.png">
+<img src="../img/prev-migrations.png">
 </p>  
-**python manage.py makemigrations**  
+
+**python** **manage.py** **makemigrations**    
+
 <p align="center"> 
-<img src="../img/prev_makemigrations.png">
+<img src="../img/prev-makemigrations.png">
 </p> 
-Ahora si podremos inicar nuestra aplicación para comprobar si todo va correctamente, ejecutaremos el comando **python manage.py runserver** y si vamos a nuestro navegador con la ruta "http://127.0.0.1:8000" obtendremos lo siguiente:  
+
+Ahora si podremos inicar nuestra aplicación para comprobar si todo va correctamente, ejecutaremos el comando **python** **manage.py** **runserver** y si vamos a nuestro navegador con la ruta "http://127.0.0.1:8000" obtendremos lo siguiente:  
 <p align="center"> 
-<img src="../img/prev_django.png">
+<img src="../img/prev.django.png">
 </p>  
 
 
