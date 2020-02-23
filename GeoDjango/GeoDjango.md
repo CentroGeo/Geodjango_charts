@@ -268,13 +268,21 @@ Con lo que ahora podremos visualizar lo siguiente en nuestro navegador:
     <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Condensed|IBM+Plex+Mono|PT+Sans|Titillium+Web&display=swap" rel="stylesheet">
     <!--Leaflet y heatmap-->
-    <script type="text/javascript" src="{% static 'js/heatmap.js' %}"></script>  
-    <script type="text/javascript" src="{% static 'js/leaflet-heatmap.js' %}"></script>  
+    {% load markdownify %}
+    {<script type="text/javascript" src="{% static 'js/heatmap.js' %}"></script> || apply_markup:"markdown" }
+    
+    {% load markdownify %}
+
+    <script type="text/javascript" src="{% static 'js/leaflet-heatmap.js' %}"></script>  || apply_markup:"markdown" } 
     <!--JQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!--CSS necesarios-->
-    <link rel="stylesheet"  href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet"  href="{% static 'css/mapa.css' %}">
+    {% load markdownify %}
+
+    { <link rel="stylesheet"  href="{% static 'css/bootstrap.min.css' %}"> || apply_markup:"markdown" }
+    {% load markdownify %}
+
+    { <link rel="stylesheet"  href="{% static 'css/mapa.css' %}"> || apply_markup:"markdown" }
     <!--Fonts necesarios-->
     <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -286,7 +294,9 @@ Con lo que ahora podremos visualizar lo siguiente en nuestro navegador:
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js" integrity="sha256-J2sc79NPV/osLcIpzL3K8uJyAD7T5gaEFKlLDM18oxY=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js" integrity="sha256-CfcERD4Ov4+lKbWbYqXD6aFM9M51gN4GUEtDhkWABMo=" crossorigin="anonymous"></script>
   <!--JS Propios-->
-    <script src="{% static 'js/datos.js' %}"></script>
+    {% load markdownify %}
+
+    { <script src="{% static 'js/datos.js' %}"></script> || apply_markup:"markdown" }
 ```  
 
 Crearemos un div general dentro del cual estárá todo el contenido (se recomienda leer un poco acerca del DOM de los navegadores para su mejor entendimiento), el cual tendrá una clase grid-container, 
