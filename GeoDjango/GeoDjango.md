@@ -21,7 +21,7 @@ Geodjango_charts/
 ```
 
 De ésta forma tendremos iniciado nuestro proyecto, ahora deberemos crear nuestra app de la siguiente forma:  
-**python manage.py createapp app**  
+**python manage.py startapp app**  
 Así habremos creado nuestra primera app, entremos a la carpeta y crearemos una carpeta dentro llamada vistaPrincipal y moveremos todos los archivos dentro de app a ella.  
 La estructura debería quedar de la siguiente forma:  
 .
@@ -52,7 +52,7 @@ Abrimos el archivo settings.py y buscamos la sección de installed apps
 <img src="../img/installed_apps_prev.png">
 </p> 
 
-Dado que estaremos trabajando con datos espaciales, tendremos que usar la extensión espacial de **django** la cual se puede consultar en el siguiente link **https://docs.djangoproject.com/en/3.0/ref/contrib/gis/**  
+Dado que estaremos trabajando con datos espaciales, tendremos que usar la extensión espacial de **django** la cual se puede consultar en el siguiente link ** https://docs.djangoproject.com/en/3.0/ref/contrib/gis/ **  
 <p align="center"> 
 <img src="../img/installed_app_post.png">
 </p>  
@@ -86,14 +86,14 @@ Ahora solo nos queda configurar para poder cargar archivos estáticos, es decir 
 Con ésto tenemos la configuración básica de nuestra aplicación hecha, aunque aún podemos modificarle cosas se dejará para más adelante.
 
 Antes de continuar es importante mencionar el concepto de **json y geojson**  
-**Json** por sus siglas JavaScript Object Notation (notación de objetos javascritp) y siendo **Geojson** un tipo de json particular para datos espaciales, para más información consultar **https://www.json.org/json-es.html**  
+**Json** por sus siglas JavaScript Object Notation (notación de objetos javascritp) y siendo ** Geojson ** un tipo de json particular para datos espaciales, para más información consultar **https://www.json.org/json-es.html**  
 
 ## ¿Qué son los modelos django ##
 Introduciremos el concepto de ORM (Object Relational Mapping) Objecto Modelo Relación en español, es un patrón de diseño que nos permite manejar las tablas de la base de datos como clases en el lenguaje, en nuestro caso Python, django internamente maneja un mapeo entre nuestras tablas en la base de datos y clases en python, es importante que la manupulación hacia las tablas de la base de datos es mejor hacerlo através del ORM que con ejecución de querys directamente a la base de datos por temas de seguridad.
 <p align="center"> 
 <img src="../img/Django-Models.png">
 </p> 
-### Cómo definir modelos en  python ###
+###Cómo definir modelos en  python###
 Debemos irnos al archivo models.py dentro de app y veremos lo siguiente:  
 <p align="center"> 
 <img src="../img/prev_models.png">
@@ -168,12 +168,12 @@ def index(request):
         
         return HttpResponseForbidden()
 ```  
-De momento no necesitamos definir un comportamiento para el método POST hacia nuestro index por lo que  usamos 403 de http para denegar la petición, solo nos interesa mandar peticiones de tipo GET al servidor para renderizar el html de la página principal, aunque la convención es a la primera vista llamarla **index.html**, posteriormente debemos ir a nuestro archivo urls.py dentro de la carpeta prueba y deberá verse de la siguiente forma:  
+De momento no necesitamos definir un comportamiento para el método POST hacia nuestro index por lo que  usamos 403 de http para denegar la petición, solo nos interesa mandar peticiones de tipo GET al servidor para renderizar el html de la página principal, aunque la convención es a la primera vista llamarla **index.html**, posteriormente debemos ir a nuestro archivo **urls.py** dentro de la carpeta prueba y deberá verse de la siguiente forma:  
 <p align="center"> 
 <img src="../img/prev_urls.png">
 </p>  
 Como podremos observar solo tenemos la ruta para el admin propio de django, ahora en éste arreglo debemos definir la ruta para cada ruta que tengamos en nuestro servidor django, de 
-momento solo tendremos la que contendrá el mapa en leaflet, por lo que deberemos tener el siguiente código:
+momento solo tendremos la que contendrá el mapa en leaflet, por lo que deberemos tener el siguiente código en nuestro archivo **prueba/urls.py**:
 
 ```python
 from django.contrib import admin
@@ -182,14 +182,36 @@ from django.conf.urls import url ,include
 from app.vistaPrincipal.urls import *
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home),
+    path('', index),
 ]
 ```
-Entre las comillas debemos escribir la ruta que deberá tomar, cuando dejamos las comillas en vacío le estamos indicando que la ruta por defecto es "http://127.0.0.1:8000" y por ejemplo
-si vamos a nuestro navegador con la ruta "http://127.0.0.1:8000/admin/" obtendremos lo siguiente:  
+Y crearemos un nuevo archivo **urls.py** dentro de la carpeta vistaPrincipal con el siguiente contenido:
+
+```python
+from django.urls import path
+from django.conf.urls import url,include
+from app.vistaPrincipal.views import *
+urlpatterns = [
+    path('^$',index),
+]
+```  
+Entre las comillas debemos escribir la ruta que deberá tomar, cuando dejamos las comillas en vacío le estamos indicando que la ruta por defecto es "http://127.0.0.1:8000".  
+
+Previo a iniciar por primera vez nuestro servidor debemos aplicar las **migrations** las cuales son la forma en la que django aplica los cambios a los modelos definidos y con el comando **makemigrations** se crean nuevas migraciones sobre la base de datos, es por ello que deberemos ejecutar los siguientes comandos:  
+**python manage.py migrate**
+<p align="center"> 
+<img src="../img/prev_migrations.png">
+</p>  
+**python manage.py makemigrations**  
+<p align="center"> 
+<img src="../img/prev_makemigrations.png">
+</p> 
+Ahora si podremos inicar nuestra aplicación para comprobar si todo va correctamente, ejecutaremos el comando **python manage.py runserver** y si vamos a nuestro navegador con la ruta "http://127.0.0.1:8000" obtendremos lo siguiente:  
 <p align="center"> 
 <img src="../img/prev_django.png">
 </p>  
+
+
 
 ## Creación de nuestro archivo home.html
 Debemos crear las carpetas static y templates por convención se deben usar esos nombres, con lo cual nuestro proyecto debe tener la siguiente estructura:  
