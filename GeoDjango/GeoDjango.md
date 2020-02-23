@@ -383,7 +383,24 @@ Geodjango_charts/
 <img src="../img/repo.png">
 </p>  
 
+Hasta el momento si revisamos nuestra página observaremos lo siguiente:
+<p align="center"> 
+<img src="../img/prev-mapa.png">
+</p>  
 
+Aun no lo hemos dado estilo pero tenemos los elementos que necesitamos, dejaremos un poco de lado el estilo de momento y procederemos a programar en JavaScript el mapa de leaflet.  
+Daremos una breve introducción a **JQuery y Ajax** que son frameworks o marcos de trabajo de Javascritp que usaremos en breve.
+
+##JQuery y Ajax
+
+**JQuery** **https://jquery.com/** es una biblioteca que nos permite manipular el HTML, el manejo de eventos, manejo de AJAX, animaciones entre otras muchas cosas, al igual que muchos otros frameworks facilitan las formas de programar en javascript.
+
+**Ajax** AJAX significa JavaScript asíncrono y XML (AJAX significa JavaScript asíncrono y XML), es un conjunto de técnicas usadas en el desarrollo web que permiten a las aplicaciones funcionar de forma asíncrona, ésto es que no se tenga que esperar a recibir respuesta del servidor para continuar la ejecución, se procesan las solicitudes en segundo plano.
+
+Ahora que al menos sabemos qué es cada cosa, podemos abrir el archivo **datos.js**, haremos una prueba para cargar los datos en cuanto nuestra página se cargue a su totalidad, para ello usaremos una función muy útil de Jquery la cual es:    
+```text
+$(document).ready(function{...});
+```
 
 
 # Referencias
