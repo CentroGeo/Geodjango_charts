@@ -378,6 +378,13 @@ Geodjango_charts/
       └── css/
         └──mapa.css
 ```  
+**Nota**, los archivos los puedes encontrar el la carpeta js del tutorial  
+<p align="center"> 
+<img src="../img/repo.png">
+</p>  
+
+
+
 
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2019, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
