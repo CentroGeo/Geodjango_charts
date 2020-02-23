@@ -261,7 +261,11 @@ Con lo que ahora podremos visualizar lo siguiente en nuestro navegador:
 <img src="../img/ejemplo-html.png">
 </p>
 
-**Hasta éste punto ya tenemos nuestro template listo para montar nuestro mapa** por lo que procedemos a importar leaflet, pero antes haremos el import de las cosas necesarias externas.  
+Debemos escribir hasta arriba de nuestro html lo siguiente **{% load staticfiles %}** así como **{% load leaflet_tags %}** y **hasta éste punto ya tenemos nuestro template listo para montar nuestro mapa** por lo que procedemos a importar leaflet, pero antes haremos el import de las cosas necesarias externas y otros tags para leaflet:  
+
+<p align="center"> 
+<img src="../img/leaflet-tags.png">
+</p>  
 
 ```html
     <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
@@ -290,9 +294,84 @@ Ahora necesitamos agregar nuestros propios archivos así que haremos los siguien
 <img src="../img/staticfiles.png">
 </p>  
 
+Crearemos un div general dentro del cual estárá todo el contenido (se recomienda leer un poco acerca del DOM de los navegadores para su mejor entendimiento), el cual tendrá una clase grid-container para colocar de mejor forma los elementos dentro del html.
+Los eleméntos básicos para el curso dentro del body quedan así, explicaremos cada uno de ellos:  
+```html  
+<div class="grid-container">
+
+      <div class='select'>
+            <select name="combo-box" id="combo-box">
+              <option value="2018">AÑO 2018</option>
+              <option value="Enero">Enero</option>
+              <option value="Febrero">Febrero</option>
+              <option value="Marzo">Marzo</option>
+              <option value="Abril">Abril</option>
+              <option value="Mayo">Mayo</option>
+              <option value="Junio">Junio</option>
+              <option value="Junio">Julio</option>
+              <option value="Agosto">Agosto</option>
+              <option value="Septiembre">Septiembre</option>
+              <option value="Octubre">Octubre</option>
+              <option value="Noviembre">Noviembre</option>
+              <option value="Diciembre">Diciembre</option>
+            </select> 
+          </div>
+          
+          <div class ='button-div'> 
+            <button class="button" type="button" onclick="mapaCalor()" >ACEPTAR</button>
+          </div>
+        
+        <div class="item3" id="map1" style="min-zoom: 3"></div>    
+      
+      </div>
+
+      
+    <div class="chart-container" >
+      <canvas id="myChartGraph" width="100" height="100" style="margin-left:100px;"></canvas> 
+      <canvas id="myChartGraph1" width="100" height="100" style="margin-left:200px;"></canvas> 
+    </div>
 
 
-Crearemos un div general dentro del cual estárá todo el contenido (se recomienda leer un poco acerca del DOM de los navegadores para su mejor entendimiento), el cual tendrá una clase grid-container, 
+```  
+
+El tag **select** nos sirve para desplegar un **combo-box** al cual através de **id** le asignamos un identificador para trabajar con él más adelante y lo llenamos con los valores que en nuestro caso nos conviene alberguen los meses del año y opciones adicionales y através del tag **option** podemos meter las opciones al combo-box, **value** le asigna un valor de tipo cadena el cual es el que lograremos obtener desde JavaScript para saber cuál fue la selección del usuario.  
+En el tag **button** le  estamos indicando que cuando sea apretado ejecute una llamada a función en nuestro caso le llamaremos mapaCalor(), así también le pondremos el mensaje de Aceptar para que el usuario después de seleccionar el mes que desea pueda filtrar los datos.  
+Debemos crear un div exclusivo para nuestro mapa de leaflet, le asignaremos el **id="map1"** y la clase de css **class="item3"**, se podría decir que solo estamos definiendo el contenedor para el mapa de momento y dejaremos pendiente las gráficas para más adelante en el curso.  
+
+Creamos un nuevo archivo llamado mapa.css y lo guardaremos dentro de la carpeta **static/css/** para más adelante poder acomodar nuestros elementos, así también copiaremos los archivos heatmat.js y leaflet-heatmap.js dentro de nuestra carpeta **static/js/** y también crearemos dentro de dicha carpeta un archivo **datos.js** con lo que nuestra estructura actualizada quedaría de la siguiente manera:  
+
+```
+Geodjango_charts/
+└── prueba/
+   ├── manage.py
+   ├── app/
+       └── vistaPrincipal/
+          └── migrations/
+          └── admin.py
+          └── app.py
+          └── models.py
+          └── tests.py
+          └── views.py
+          └── urls.py
+       └── __init__.py
+   ├── prueba/
+       └── __init__.py
+       └── __pycache__
+       └── settings.py
+       └── urls.py
+       └── wsgi.py
+    ├── templates/
+      └── primeraVista
+        └──home.html
+    ├── static/
+      └── img/
+      └── js/
+        └──datos.js
+        └──heatmap.js
+        └──leaflet-heatmap.js
+      └── css/
+        └──mapa.css
+```  
 
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2019, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
