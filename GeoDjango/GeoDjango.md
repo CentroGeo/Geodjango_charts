@@ -201,7 +201,7 @@ Entre las comillas debemos escribir la ruta que deberá tomar, cuando dejamos la
 Previo a iniciar por primera vez nuestro servidor debemos aplicar las **migrations** las cuales son la forma en la que django aplica los cambios a los modelos definidos y con el comando **makemigrations** se crean nuevas migraciones sobre la base de datos, es por ello que deberemos ejecutar los siguientes comandos:  
 **python manage.py migrate**
 <p align="center"> 
-<img src="../img/prev-migrations.png">
+<img src="../img/prev-migrate.png">
 </p>  
 
 **python** **manage.py** **makemigrations**    
@@ -212,7 +212,7 @@ Previo a iniciar por primera vez nuestro servidor debemos aplicar las **migratio
 
 Ahora si podremos inicar nuestra aplicación para comprobar si todo va correctamente, ejecutaremos el comando **python** **manage.py** **runserver** y si vamos a nuestro navegador con la ruta "http://127.0.0.1:8000" obtendremos lo siguiente:  
 <p align="center"> 
-<img src="../img/prev.django.png">
+<img src="../img/prev_django.png">
 </p>  
 
 
