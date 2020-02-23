@@ -261,7 +261,13 @@ Con lo que ahora podremos visualizar lo siguiente en nuestro navegador:
 <img src="../img/ejemplo-html.png">
 </p>
 
-Debemos escribir hasta arriba de nuestro html lo siguiente **{% load staticfiles %}** así como **{% load leaflet_tags %}** y **hasta éste punto ya tenemos nuestro template listo para montar nuestro mapa** por lo que procedemos a importar leaflet, pero antes haremos el import de las cosas necesarias externas y otros tags para leaflet:  
+Debemos escribir hasta arriba de nuestro html lo siguiente:  
+
+<p align="center"> 
+<img src="../img/static-tags.png">
+</p> 
+
+**Hasta éste punto ya tenemos nuestro template listo para montar nuestro mapa** por lo que procedemos a importar leaflet, pero antes haremos el import de las cosas necesarias externas y otros tags para leaflet:  
 
 <p align="center"> 
 <img src="../img/leaflet-tags.png">
