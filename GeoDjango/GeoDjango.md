@@ -286,18 +286,11 @@ Con lo que ahora podremos visualizar lo siguiente en nuestro navegador:
 
 Ahora necesitamos agregar nuestros propios archivos así que haremos los siguientes imports:  
 
-```txt
-  <!--JS Propios-->
-    <script src="{% static 'js/datos.js' %}"></script>
-    <!--Leaflet y heatmap-->
-    <script type="text/javascript" src="{% static 'js/heatmap.js' %}"></script>  
-    <script type="text/javascript" src="{% static 'js/leaflet-heatmap.js' %}"></script>
-    <!--CSS necesarios-->
-    <link rel="stylesheet"  href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet"  href="{% static 'css/mapa.css' %}">
+<p align="center"> 
+<img src="../img/staticfiles.png">
+</p>  
 
 
-```  
 
 Crearemos un div general dentro del cual estárá todo el contenido (se recomienda leer un poco acerca del DOM de los navegadores para su mejor entendimiento), el cual tendrá una clase grid-container, 
 
