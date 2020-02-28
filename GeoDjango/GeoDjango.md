@@ -500,5 +500,46 @@ Nuestra página debería verse de la siguiente forma:
 <img src="../img/prev-mapa-datos.png">
 </p> 
 
+Ahora implementaré una solución (no única) para que por defecto, al cargar o recargar la página, se jalen todos los datos de la base y después através del combo-box podamos filtrar los datos, de momento la implementación para cargar por defecto todos los datos con python y js sería de la siguiente forma (explicaremos paso a paso):
+
+```javascript
+map1 = new L.Map('map1', {
+        zoomControl: true,
+        minZoom: 11,
+        maxZoom: 20,
+        layers: [baseLayer, heatmapLayer],
+        zoomAnimation: true,
+        keyboard: true
+      }).setView([19.40, -99.14], 11);
+```
+Primero programaremos toda la parte de Javascript  
+
+```javascript
+$.ajax({
+        type: "GET",
+        url: 'data/',
+        data: {
+          'val': '2018'
+        },
+        dataType: 'json', 
+        async: true,
+
+        ...});
+```
+Iniciamos una petición de ajax con jquery, le definimos el método http que usaremos, en nuestro caso nos interesa obtener información del servidor, por lo que el método ideal es **GET**, le pasamos el url al que debe hacer la petición en nuestro caso **data/**, le indicamos que el tipo de dato que queremos es un **JSON** y la petición que sea asíncrona, es decir que si le es posible continue con la ejecución mientras espera la respuesta del servidor ésto es por temas de experiencia de usuario.  
+Ahora que logramos hacer nuestra petición debemos usar lo que se conoce como **promesas** de js, ésto podemos verlo como un objeto que representa éxito o fracaso en la petición asíncrona que hemos realizado con ajax, siempre se ejecutan terminando las funciones anteriores, entonces si todo sale bien y recibimos los datos usaremos una promesa para manejar la respuesta del servidor que debiera ser un objeto JSON.  
+La sintaxis es la siguiente:  
+```javascript
+$.ajax({
+        ...
+
+        success:function(respuesta){
+          //Uso de respuesta  
+        }
+        });
+```
+
+
+
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2019, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
