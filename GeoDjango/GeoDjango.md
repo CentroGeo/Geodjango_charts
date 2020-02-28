@@ -570,7 +570,12 @@ Como podremos observar, solo estaremos permitiendo peticiones de tipo **GET** da
             return  HttpResponse(dataAux)
 ```
 
-La sintaxis es Modelo.objects.metodo(parametros), para el primer caso como nos interesa consultar los datos de un determinado mes, debemos aplicar un filtro con .filter() y los parámetros deben corresponder a los atributos de la tabla en la base de datos, en nuestro caso es fecha (el cual es el atributo de tipo date en django)  
+La sintaxis es Modelo.objects.metodo(parametros), para el primer caso como nos interesa consultar los datos de un determinado mes, debemos aplicar un filtro con .filter() y los parámetros deben corresponder a los atributos de la tabla en la base de datos, en nuestro caso es fecha (el cual es el atributo de tipo date en django) es un equivalante a hacer ésto en postgres:  
+
+
+```sql
+select * from "vistaPrincipal_datos" where date_part('month', fecha) = mesFiltrado;
+```
 
 ```javascript
 $.ajax({
