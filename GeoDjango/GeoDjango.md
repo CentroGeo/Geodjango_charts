@@ -470,16 +470,12 @@ Ahora procederemos a asignar el objeto de configuración a la variable **cfg** d
       };
 ```  
 Donde el campo **radius** indicará el radio de nuestro punto en el mapa, **maxOpacity** la opacidad del punto, en el objeto **gradient** la escala de colores, **scaleRadius** le indica que el punto se reescala conforme alejas el zoom en el mapa, **latfield** le indicará qué campo deberá tomar de los datos que le pasemos para la latitud, por otro lado **lngField** es para la longitud.  
-Para crear nuestra capa de mapa de calor instanciamos e inicializamos la instancia con ayuda de la clase **HeatMapLayer** de la sigueinte forma:  
+Para crear nuestra capa de mapa de calor instanciamos e inicializamos la instancia con ayuda de la clase **HeatMapLayer** de la siguiente forma:  
 
 ```javascript
 heatmapLayer = new HeatmapOverlay(cfg);  
 ```  
-Procederemos a inicializar nuestra capa de mapa de calor  a la cual llamaremos **heatmapLayer**:  
-
-```javascript  
-heatmapLayer = new HeatmapOverlay(cfg);  
-```  
+ 
 A continuación debemos inicilizar el mapa con ambas capas, **baseLayer** nos proporciona la capa que contiene el **tile server** y heatmap contiene la representación de los mapas de calor entonces procedemos a escribir el siguiente código:  
 
 ```javascript
