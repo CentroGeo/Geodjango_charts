@@ -391,11 +391,11 @@ Hasta el momento si revisamos nuestra página observaremos lo siguiente:
 Aun no lo hemos dado estilo pero tenemos los elementos que necesitamos, dejaremos un poco de lado el estilo de momento y procederemos a programar en JavaScript el mapa de leaflet.  
 Daremos una breve introducción a **JQuery y Ajax** que son frameworks o marcos de trabajo de Javascritp que usaremos en breve.
 
-##JQuery y Ajax
+## JQuery y Ajax
 
 **JQuery** **https://jquery.com/** es una biblioteca que nos permite manipular el HTML, el manejo de eventos, manejo de AJAX, animaciones entre otras muchas cosas, al igual que muchos otros frameworks facilitan las formas de programar en javascript.
 
-**Ajax** AJAX significa JavaScript asíncrono y XML (AJAX significa JavaScript asíncrono y XML), es un conjunto de técnicas usadas en el desarrollo web que permiten a las aplicaciones funcionar de forma asíncrona, ésto es que no se tenga que esperar a recibir respuesta del servidor para continuar la ejecución, se procesan las solicitudes en segundo plano.
+**Ajax**  significa JavaScript asíncrono y XML (AJAX significa JavaScript asíncrono y XML), es un conjunto de técnicas usadas en el desarrollo web que permiten a las aplicaciones funcionar de forma asíncrona, ésto es que no se tenga que esperar a recibir respuesta del servidor para continuar la ejecución, se procesan las solicitudes en segundo plano.
 
 Ahora que al menos sabemos qué es cada cosa, podemos abrir el archivo **datos.js**, haremos una prueba para cargar los datos en cuanto nuestra página se cargue a su totalidad, para ello usaremos una función muy útil de Jquery la cual es:    
 
@@ -421,7 +421,7 @@ La variable testData es un objeto el cual tiene un atributo data de tipo array q
 Donde zoom es una opción que le podemos cambiar al métodod TileLayer de leaflet **puede consultar el siguiente link para más información** **https://leafletjs.com/reference-1.6.0.html#tilelayer**, TileLayer por su parte nos permita para cargar y mostrar capas en nuestro mapa, el primero parámetro del método corresponde al template del mapa (los cuales puede cambiar a consideración dependiendo el uso) se pueden encontrar algunos en el siguiente link **https://wiki.openstreetmap.org/wiki/Tile_servers**, el siguiente parámetro es un objeto con opciones para nuestro mapa, puede consultar las opciones aquí o puede dirigirse a link que se puso previamente, de momento nos quedaremos solo con zoom y attribution para dar crédito a OpenStreetMaps
 
 <p align="center"> 
-<img src="../img/tilelayetoption.png">
+<img src="../img/tilelayetoptions.png">
 </p> 
 
 
