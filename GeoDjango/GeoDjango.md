@@ -536,9 +536,51 @@ $.ajax({
         success:function(respuesta){
           //Uso de respuesta  
         }
-        });
+});
 ```
 
+Solo para un mejor entendimiento voy a aclarar, directamente podríamos pasar el json como los datos para el mapa pero en particular nos interesa filtrar algunos campos por ende será un poco repetitivo y antes iremos a python a programar la parte del backend donde se procesará la petición, por lo que abriremos nuevamente el archivo **app/vistaPrincipal/views.py**
+
+```python
+    #código previo
+@csrf_exempt
+def data(request):
+    if request.method == 'GET':
+        val = request.GET.get('val')
+        #podemos imprimir el valor para debug solamente, en producción por buenas prácticas de programación no hay que dejar print's 
+        print(val)
+        if(val != "2018"):    
+            dataAux = serializers.serialize("geojson", Datos.objects.filter(fecha__month=val))
+            return  HttpResponse(dataAux)
+        else:
+            dataAux = serializers.serialize("geojson", Datos.objects.all())
+            return  HttpResponse(dataAux)
+    elif request.method == 'POST':
+        return HttpResponseForbidden()
+```  
+
+Como podremos observar, solo estaremos permitiendo peticiones de tipo **GET** dado que no tiene sentido recibir **POST**, el usuario solo quiere consultar datos, por tanto no modificar el estado del servidor, así que usamos 403 de HTTP forbidden como lo podemos ver en el código de arriba. Ahora bien, la lógica nos lleva a dos casos, si el valor buscado por el usuario corresponde a **2018** u otro caso, por ejemplo, **Enero** independientemente del valor, lo único que hay que hacer es un query a la base de datos pero por temas de seguridad se recomienda hacerlo através del ORM y no de ejecuciones directas, ésto con el fin de evitar **SQLInjection**. 
+
+```python
+            #... 
+            dataAux = serializers.serialize("geojson", Datos.objects.filter(fecha__month=val))
+            return  HttpResponse(dataAux)
+            # else:
+            dataAux = serializers.serialize("geojson", Datos.objects.all())
+            return  HttpResponse(dataAux)
+```
+
+La sintaxis es Modelo.objects.metodo(parametros), para el primer caso como nos interesa consultar los datos de un determinado mes, debemos aplicar un filtro con .filter() y los parámetros deben corresponder a los atributos de la tabla en la base de datos, en nuestro caso es fecha (el cual es el atributo de tipo date en django)  
+
+```javascript
+$.ajax({
+        ...
+
+        success:function(respuesta){
+          responseFeatures = respuesta['features']
+        }
+});
+```
 
 
 # Referencias
