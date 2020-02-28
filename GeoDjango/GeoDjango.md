@@ -139,8 +139,7 @@ Importaremos las siguientes bibliotecas:
 from django.shortcuts import render
 import json
 from geojson import Point, Feature, FeatureCollection, dump
-import pandas as pd
-import geopandas
+
 
 from django.contrib.gis.geos import Polygon, Point, MultiPoint, GeometryCollection
 from shapely.geometry import Point, mapping, shape
@@ -426,8 +425,42 @@ Donde zoom es una opción que le podemos cambiar al métodod TileLayer de leafle
 <img src="../img/tilelayetoptions.png">
 </p> 
 
+Ahora procederemos a asignar el objeto de configuración a la variable **cfg** de la siguiente forma:   
+```javascript
+ var cfg = {
+        // radius should be small ONLY if scaleRadius is true (or small radius is intended)
+        // if scaleRadius is false it will be the constant radius used in pixels
+        "radius": .008,
+        "maxOpacity": .5,
+        "gradient": {
+          '0': 'Navy', '0.25': 'Navy',
+          '0.26': 'Green',
+          '0.5': 'Green',
+          '0.51': 'Yellow',
+          '0.75': 'Yellow',
+          '0.76': 'Red',
+          '1': 'Red'
+        },
+        // scales the radius based on map zoom
+        "scaleRadius": true,
+        // if set to false the heatmap uses the global maximum for colorization
+        // if activated: uses the data maximum within the current map boundaries
+        //   (there will always be a red spot with useLocalExtremas true)
+        "useLocalExtrema": true,
+        // which field name in your data represents the latitude - default "lat"
+        latField: 'lat',
+        // which field name in your data represents the longitude - default "lng"
+        lngField: 'lng',
+        // which field name in your data represents the data value - default "value"
 
+      };
+```  
+Donde el campo **radius** indicará el radio de nuestro punto en el mapa, **maxOpacity** la opacidad del punto, en el objeto **gradient** la escala de colores, **scaleRadius** le indica que el punto se reescala conforme alejas el zoom en el mapa, **latfield** le indicará qué campo deberá tomar de los datos que le pasemos para la latitud, por otro lado **lngField** es para la longitud.  
+Para crear nuestra capa de mapa de calor instanciamos e inicializamos la instancia con ayuda de la clase **HeatMapLayer** de la sigueinte forma:  
 
+```javascript
+heatmapLayer = new HeatmapOverlay(cfg); 
+```
  
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2019, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
