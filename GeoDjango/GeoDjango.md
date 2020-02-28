@@ -574,8 +574,17 @@ La sintaxis es Modelo.objects.metodo(parametros), para el primer caso como nos i
 
 
 ```sql
+---dataAux = serializers.serialize("geojson", Datos.objects.filter(fecha__month=val))
+
 select * from "vistaPrincipal_datos" where date_part('month', fecha) = mesFiltrado;
 ```
+Y por otro lado el equivalente al caso 2 sería:  
+
+```sql
+---dataAux = serializers.serialize("geojson", Datos.objects.all())
+select * from "vistaPrincipal_datos";
+```
+
 
 ```javascript
 $.ajax({
