@@ -44,7 +44,7 @@ Geodjango_charts/
        └── settings.py
        └── urls.py
        └── wsgi.py
-```  
+```    
 ## Configuración del proyecto ##  
 Hasta éste punto habremos creado nuestra app ahora debemos realizar unas pequeñas configuraciones en el archivo **settings.py** con el fin de tener la configuración lista para nuestra app.  
 Abrimos el archivo settings.py y buscamos la sección de installed apps  
@@ -301,44 +301,58 @@ Ahora necesitamos agregar nuestros propios archivos así que haremos los siguien
 <img src="../img/staticfiles.png">
 </p>  
 
-Crearemos un div general dentro del cual estárá todo el contenido (se recomienda leer un poco acerca del DOM de los navegadores para su mejor entendimiento), el cual tendrá una clase grid-container para colocar de mejor forma los elementos dentro del html.
-Los eleméntos básicos para el curso dentro del body quedan así, explicaremos cada uno de ellos:  
+De momento no nos meteremos con css por lo que tendremos una estructura básica para un mejor entendimiento  del curso, por lo que quedarían de la siguiente forma y explicaremos cada uno de ellos:  
 ```html  
-<div class="grid-container">
+<div class="Instrucciones">
+            <h2>INSTRUCCIONES</h2>
+            <p> En el mapa se observan de color rojo las zonas con mayor
+              densidad de incidentes viales fatales para el año 2019 en la Ciudad de México. 
+              Al seleccionar un mes es posible identificar su variación temporal. Además de la descripción del suceso.
+            </p>     
+        </div>
+        <!--Un botón para -->
 
-      <div class='select'>
-            <select name="combo-box" id="combo-box">
-              <option value="2018">AÑO 2018</option>
-              <option value="Enero">Enero</option>
-              <option value="Febrero">Febrero</option>
-              <option value="Marzo">Marzo</option>
-              <option value="Abril">Abril</option>
-              <option value="Mayo">Mayo</option>
-              <option value="Junio">Junio</option>
-              <option value="Junio">Julio</option>
-              <option value="Agosto">Agosto</option>
-              <option value="Septiembre">Septiembre</option>
-              <option value="Octubre">Octubre</option>
-              <option value="Noviembre">Noviembre</option>
-              <option value="Diciembre">Diciembre</option>
-            </select> 
-          </div>
-          
-          <div class ='button-div'> 
-            <button class="button" type="button" onclick="mapaCalor()" >ACEPTAR</button>
-          </div>
-        
-        <div class="item3" id="map1" style="min-zoom: 3"></div>    
-      
+        <div class='select'>
+          <select name="combo-box" id="combo-box">
+            <option value="2018">AÑO 2018</option>
+            <option value="Enero">Enero</option>
+            <option value="Febrero">Febrero</option>
+            <option value="Marzo">Marzo</option>
+            <option value="Abril">Abril</option>
+            <option value="Mayo">Mayo</option>
+            <option value="Junio">Junio</option>
+            <option value="Junio">Julio</option>
+            <option value="Agosto">Agosto</option>
+            <option value="Septiembre">Septiembre</option>
+            <option value="Octubre">Octubre</option>
+            <option value="Noviembre">Noviembre</option>
+            <option value="Diciembre">Diciembre</option>
+          </select> 
+        </div>
+
+      <div class ='button-div'> 
+          <button class="button" type="submit" onclick="mapaCalor()" >ACEPTAR</button>
       </div>
 
       
-    <div class="chart-container" >
-      <canvas id="myChartGraph" width="100" height="100" style="margin-left:100px;"></canvas> 
-      <canvas id="myChartGraph1" width="100" height="100" style="margin-left:200px;"></canvas> 
-    </div>
+      <div class ='mapa'>
+            <div class="item1" id="map1" style="min-zoom: 3;"></div>    
+      </div>
+      <div class="chart-container" >
+        <canvas id="myChartGraph" width="100" height="100" style="margin-left:100px;"></canvas> 
+        <canvas id="myChartGraph1" width="100" height="100" style="margin-left:200px;"></canvas> 
+
+       </div> 
 
 
+```  
+Ahora en nuestro archivo **mapa.css** solo debemos tener lo siguiente:  
+
+```css
+.item1{
+  height:500px;
+  width:50%;
+}
 ```  
 
 El tag **select** nos sirve para desplegar un **combo-box** al cual através de **id** le asignamos un identificador para trabajar con él más adelante y lo llenamos con los valores que en nuestro caso nos conviene alberguen los meses del año y opciones adicionales y através del tag **option** podemos meter las opciones al combo-box, **value** le asigna un valor de tipo cadena el cual es el que lograremos obtener desde JavaScript para saber cuál fue la selección del usuario.  
@@ -459,8 +473,28 @@ Donde el campo **radius** indicará el radio de nuestro punto en el mapa, **maxO
 Para crear nuestra capa de mapa de calor instanciamos e inicializamos la instancia con ayuda de la clase **HeatMapLayer** de la sigueinte forma:  
 
 ```javascript
-heatmapLayer = new HeatmapOverlay(cfg); 
+heatmapLayer = new HeatmapOverlay(cfg);  
+```  
+Procederemos a inicializar nuestra capa de mapa de calor  a la cual llamaremos **heatmapLayer**:  
+
+```javascript  
+heatmapLayer = new HeatmapOverlay(cfg);  
+```  
+A continuación debemos inicilizar el mapa con ambas capas, **baseLayer** nos proporciona la capa que contiene el **tile server** y heatmap contiene la representación de los mapas de calor entonces procedemos a escribir el siguiente código:  
+
+```javascript
+map1 = new L.Map('map1', {
+        zoomControl: true,
+        minZoom: 11,
+        maxZoom: 20,
+        layers: [baseLayer, heatmapLayer],
+        zoomAnimation: true,
+        keyboard: true
+      }).setView([19.40, -99.14], 11);
 ```
- 
+  
+Donde el campo **zoomControl** recibe un valor booleano para indicar si se puede acercar o alejar el zoom con la rueda del ratón, **minZoom** es el mínimo zoom que puede tener el mapa y **maxZoom** es el máximo zoom que puede tener, **layers** es probablemente el campo de configuración más importante porque aquí le indicamos las capas que debe tener nuestro mapa, por lo que debe incluir la capa con los datos para el mapa de calor y el mapa base, existen otras opciones que podemos incluir en nuestro mapa las cuales se pueden consultar en el siguiente link https://leafletjs.com/reference-1.6.0.html#map-option  
+
+
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2019, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
