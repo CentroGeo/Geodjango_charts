@@ -183,7 +183,7 @@ from django.conf.urls import url ,include
 from app.vistaPrincipal.urls import *
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index),
+    path('', include('app.vistaPrincipal.urls')),
 ]
 ```
 Y crearemos un nuevo archivo **urls.py** dentro de la carpeta vistaPrincipal con el siguiente contenido:
@@ -193,11 +193,13 @@ from django.urls import path
 from django.conf.urls import url,include
 from app.vistaPrincipal.views import *
 urlpatterns = [
-    path('^$',index),
+    path('',index),
 ]
 ```  
 Entre las comillas debemos escribir la ruta que deberá tomar, cuando dejamos las comillas en vacío le estamos indicando que la ruta por defecto es "http://127.0.0.1:8000".  
 
+### Nota con las rutas  
+Es posible definir varios archivos  de rutas, podríamos definir para cada módulo de nuestra aplicación un **urlpattern** para manejar las vistas correspondientes,  
 Previo a iniciar por primera vez nuestro servidor debemos aplicar las **migrations** las cuales son la forma en la que django aplica los cambios a los modelos definidos y con el comando **makemigrations** se crean nuevas migraciones sobre la base de datos, es por ello que deberemos ejecutar los siguientes comandos:  
 **python manage.py migrate**
 <p align="center"> 
