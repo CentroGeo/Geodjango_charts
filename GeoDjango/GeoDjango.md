@@ -570,7 +570,7 @@ Como podremos observar, solo estaremos permitiendo peticiones de tipo **GET** da
             return  HttpResponse(dataAux)
 ```
 
-La sintaxis es Modelo.objects.metodo(parametros), para el primer caso como nos interesa consultar los datos de un determinado mes, debemos aplicar un filtro con .filter() y los parámetros deben corresponder a los atributos de la tabla en la base de datos, en nuestro caso es fecha (el cual es el atributo de tipo date en django) es un equivalante a hacer ésto en postgres:  
+La sintaxis es Modelo.objects.metodo(parametros), para el primer caso como nos interesa consultar los datos de un determinado mes, debemos aplicar un filtro con .filter() y los parámetros deben corresponder a los atributos de la tabla en la base de datos, en nuestro caso es fecha (el cual es el atributo de tipo date en django) es un equivalente a hacer ésto en postgres:  
 
 
 ```sql
@@ -578,13 +578,13 @@ La sintaxis es Modelo.objects.metodo(parametros), para el primer caso como nos i
 
 select * from "vistaPrincipal_datos" where date_part('month', fecha) = mesFiltrado;
 ```
-Y por otro lado el equivalente al caso 2 sería:  
+Y por otro lado el equivalente al caso 2 sería el siguiente:  
 
 ```sql
 ---dataAux = serializers.serialize("geojson", Datos.objects.all())
 select * from "vistaPrincipal_datos";
 ```
-
+Cuando obtenemos los datos ahora hay que serializarlos, para ésto nos axiliaremos de la clase serializer de django  **https://docs.djangoproject.com/en/3.0/ref/contrib/gis/serializers/** donde el primer parámetro indica a qué tipo de formato queremos serializar, en nuestro caso es json (o geojson en particular). Una vez teniendo serializando los datos debemos regresarlos a JavaScript para que pueda seguir con la ejecución.
 
 ```javascript
 $.ajax({
