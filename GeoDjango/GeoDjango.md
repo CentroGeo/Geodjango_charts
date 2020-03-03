@@ -24,7 +24,8 @@ De ésta forma tendremos iniciado nuestro proyecto, ahora deberemos crear nuestr
 **python manage.py startapp app**  
 Así habremos creado nuestra primera app, entremos a la carpeta y crearemos una carpeta dentro llamada vistaPrincipal y moveremos todos los archivos dentro de app a ella.  
 La estructura debería quedar de la siguiente forma:  
-.
+.  
+
 ```
 Geodjango_charts/
 └── prueba/
@@ -45,6 +46,7 @@ Geodjango_charts/
        └── urls.py
        └── wsgi.py
 ```    
+
 ## Configuración del proyecto ##  
 Hasta éste punto habremos creado nuestra app ahora debemos realizar unas pequeñas configuraciones en el archivo **settings.py** con el fin de tener la configuración lista para nuestra app.  
 Abrimos el archivo settings.py y buscamos la sección de installed apps  
