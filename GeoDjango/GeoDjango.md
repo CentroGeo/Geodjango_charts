@@ -12,13 +12,14 @@ El objetivo de éste curso es aprender a montar una aplicación web con Django y
 <img src="../img/01.png">
 </p>   
 Se generará una carpeta con el nombres del proyecto y al abrirla encontraremos la siguiente estructura:  
-.
+.  
+
 ```
 Geodjango_charts/
 └── prueba/  
 	└── manage.py   
 	└── prueba/  
-```
+```  
 
 De ésta forma tendremos iniciado nuestro proyecto, ahora deberemos crear nuestra app de la siguiente forma:  
 **python manage.py startapp app**  
