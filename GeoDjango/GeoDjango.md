@@ -871,9 +871,11 @@ Tenemos el número de ocurrencia de cada cadena con lo cual ya solo debemos crea
    }
    //...
 ```
-Con ésto obtendriamos lo siguiente en nuestra página:  
+Con ésto obtendriamos lo siguiente en nuestra página:   
 
-
+<p align="center"> 
+<img src="../img/charts.png">
+</p> 
 
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2019, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
