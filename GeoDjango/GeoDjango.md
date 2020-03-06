@@ -594,7 +594,104 @@ $.ajax({
         }
 });
 ```
+Como nos interesa guardar los datos para las gráficas, aunque no es la única forma de hacerlo guardaremos en arreglos auxiliares, para recorrer el objeto json usaremos la estructura **for-each** de js  
 
+
+```javascript
+$.ajax({
+        ...
+
+        success:function(respuesta){
+          responseFeatures = respuesta['features']
+	  geoms = []
+	  props = []
+	  element = []
+	  responseFeatures.forEach(element => geoms.push(element.geometry) && props.push(element.properties["delito"]) && 
+	  entidad.push(element.properties["identidad"]));
+        }
+});
+```
+Lo que hicismo fue iterar sobre cada elemento dentro de las responseFeatures del geojson y guardamos en el respectivo arreglolos datos. Ahora, guardaremos las coordenadas de los puntos en otro arreglo
+```javascript
+$.ajax({
+        ...
+
+        success:function(respuesta){
+          responseFeatures = respuesta['features']
+	  geoms = []
+	  props = []
+	  element = []
+	  responseFeatures.forEach(element => geoms.push(element.geometry) && props.push(element.properties["delito"]) && 
+	  entidad.push(element.properties["identidad"]));
+	  auxPuntosFinal = []
+          geoms.forEach( function(element) {
+            auxPuntos = []
+            auxPuntos.push(element.coordinates[0][1])
+            auxPuntos.push(element.coordinates[0][0])
+            auxPuntosFinal.push(auxPuntos)
+          });
+	  
+        }
+});
+```
+Iteramos sobre las geometrías para las coorendas de cada punto y lo guardarmos como sub-arreglos de longitud 2 para posteriormente iterar sobre el arreglo de arreglos resultante y obtener la latitud y longitud  
+
+```javascript
+$.ajax({
+        ...
+
+        success:function(respuesta){
+          responseFeatures = respuesta['features']
+	  geoms = []
+	  props = []
+	  element = []
+	  responseFeatures.forEach(element => geoms.push(element.geometry) && props.push(element.properties["delito"]) && 
+	  entidad.push(element.properties["identidad"]));
+	  auxPuntosFinal = []
+          geoms.forEach( function(element) {
+            auxPuntos = []
+            auxPuntos.push(element.coordinates[0][1])
+            auxPuntos.push(element.coordinates[0][0])
+            auxPuntosFinal.push(auxPuntos)
+          });
+	  datos = []
+          auxPuntosFinal.forEach( function(element) {
+              dataAux = {
+                         lat: element[0],
+                         lng:element[1]
+                       }
+              datos.push(dataAux)
+          });
+	  
+        }
+});
+```
+Ahora que tenemos los datos para el mapa de calor (las coordenadas) se las asignaremos a nuestro objeto testData el arreglo datos de la siguiente forma:  
+
+
+```javascript
+$.ajax({
+        ...
+	varData = datos
+        
+});
+```
+Y le asignamos los puntos a nuestro mapa de calor a través del método setData()  
+```javascript
+$.ajax({
+        ...
+	heatmapLayer.setData(testData);
+        
+});
+```
+
+Ahora le pasaremos los datos para generar las gráficas, mandamos a llamar la función graficar(a,b) con los siguientes parámetros  ```javascript
+$.ajax({
+        ...
+	 graficar(entidad, props)
+        
+});
+```
 
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2019, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
