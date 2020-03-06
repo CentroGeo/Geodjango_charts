@@ -699,7 +699,20 @@ Ahora debemos tener lo siguiente en nuestro mapa:
 
 <p align="center"> 
 <img src="../img/mapa01.png">
-</p>
+</p>  
+
+Notemos que en nuestro html tenemos  
+
+```html
+
+      <div class="chart-container" >
+        <canvas id="myChartGraph" width="100" height="100" style="margin-left:100px;"></canvas> 
+        <canvas id="myChartGraph1" width="100" height="100" style="margin-left:200px;"></canvas> 
+       </div> 
+```  
+Tenemos dos canvas donde se dibujarán nuestras gráficas, ahora debemos inicializarlas en el código JS.  
+
+
 
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2019, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
