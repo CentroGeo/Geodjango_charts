@@ -685,16 +685,21 @@ $.ajax({
 });
 ```
 
-Ahora le pasaremos los datos para generar las gráficas, mandamos a llamar la función graficar(a,b) con los siguientes parámetros   ```javascript
+Ahora le pasaremos los datos para generar las gráficas, mandamos a llamar la función graficar(a,b) con los siguientes parámetros   
+
+```javascript
 $.ajax({
         ...
 	 graficar(entidad, props)
         
 });
 ```
-Ahora debemos tener lo siguiente en nuestro mapa:
+
+Ahora debemos tener lo siguiente en nuestro mapa:  
+
 <p align="center"> 
 <img src="../img/mapa01.png">
 </p>
+
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2019, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
