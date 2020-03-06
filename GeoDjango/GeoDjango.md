@@ -729,8 +729,75 @@ Tenemos dos canvas donde se dibujarán nuestras gráficas, ahora debemos inicial
       }
     //... 
      }  
+```    
+Debemos crear la variable a la cual asignar los canvas, dado que estamos recibiendo dos arreglos usamos la función de JS JSON.stringify() para convertir el arreglo en una cadena, después usamos el método document.getElementById() para regresar un objeto de tipo **Element** que representa el elemento cuyo id coincide con la cadena y getContext es un método de canvas de html para devolver un "contexto de dibujo" y con 2d le estamos indicando que el tipo de contexto es de dos dimensiones. Con la estructura **if** checamos si ya estaba previamente inicializada y de ser así la destruimos para poder volver a usar el canvas y  que los datos se sobreescriban de forma correcta.  
+```javascript
+//...
+//Indicamos que la letra en las gráficas sea blanca
+Chart.defaults.global.defaultFontColor = 'white';
 ```  
-Debemos crear la variable a la cual asignar los canvas, dado que estamos recibiendo dos arreglos usamos la función de JS JSON.stringify() para convertir el arreglo en una cadena, después usamos el método document.getElementById() para regresar un objeto de tipo **Element** que representa el elemento cuyo id coincide con la cadena y getContext es un método de canvas de html para devolver un "contexto de dibujo" y con 2d le estamos indicando que el tipo de contexto es de dos dimensiones. Con la estructura **if** checamos si ya estaba previamente inicializada y de ser así la destruimos para poder volver a usar el canvas y  que los datos se sobreescriban de forma correcta.
+Ahora vamos a filtrar los datos con ayuda de una estructura **switch-case** (No es la única forma de hacerlo pero es intuitiva)  
+
+```javascript
+
+var numPeaton = 0;
+      var numMoto = 0;
+      var numPasajero = 0;
+      var numCiclista = 0;
+      var numConductor = 0;
+      for (var i = 0; i <= datos.length - 1; i++) {
+        console.log(datos[i])
+        switch(datos[i]){
+          case "PEATON":
+              numPeaton +=1;
+            break;
+          case "MOTOCICLISTA":
+              numMoto+=1;
+              break;
+          case "PASAJERO":
+            numPasajero+=1;
+            break;
+          case "CICLISTA":
+            numCiclista+=1;
+            break;
+          case "CONDUCTOR":
+            numConductor+=1;
+            break;
+          default:
+            console.log("No está cazando")
+            break;
+          
+
+        }
+      }
+      var atropellado = 0
+      var colision = 0
+      var caida = 0
+      var transito = 0
+      for (var i = 0; i <= delitoData.length - 1; i++) {
+        switch(delito[i]){
+          case "HOMICIDIO CULPOSO POR TRÁNSITO VEHICULAR (CAIDA)":
+              atropellado +=1;
+            break;
+          case "HOMICIDIO CULPOSO POR TRÁNSITO VEHICULAR (COLISION)":
+              colision+=1;
+              break;
+          case "HOMICIDIO CULPOSO POR TRÁNSITO VEHICULAR (ATROPELLADO)":
+              caida+=1;
+            break;
+          case "HOMICIDIO CULPOSO POR TRÁNSITO VEHICULAR":
+              transito+=1;
+            break;
+          
+          default:
+            console.log("No está cazando delito")
+            break;
+          
+
+        }
+      }
+
+```  
 
 
 # Referencias
