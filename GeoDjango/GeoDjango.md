@@ -739,8 +739,8 @@ Chart.defaults.global.defaultFontColor = 'white';
 Ahora vamos a filtrar los datos con ayuda de una estructura **switch-case** (No es la única forma de hacerlo pero es intuitiva)  
 
 ```javascript
-
-var numPeaton = 0;
+      //...
+      var numPeaton = 0;
       var numMoto = 0;
       var numPasajero = 0;
       var numCiclista = 0;
@@ -764,7 +764,6 @@ var numPeaton = 0;
             numConductor+=1;
             break;
           default:
-            console.log("No está cazando")
             break;
           
 
@@ -790,14 +789,90 @@ var numPeaton = 0;
             break;
           
           default:
-            console.log("No está cazando delito")
             break;
           
 
         }
       }
-
+	...
 ```  
+Tenemos el número de ocurrencia de cada cadena con lo cual ya solo debemos crear nuestras gráficas con éstos datos de la siguiente forma:  
+
+```javascript
+    //... 
+    myChart = new Chart(ctx, {
+          type:"doughnut", //Indicamos el tipo de gráfica
+          data: {
+            labels:['PEATON','MOTOCICLISTA','PASAJERO','CICLISTA','CONDUCTOR'], //Damos las cabezeras a la gráfica
+            datasets:[{
+              label:'Tipo de Entidad',
+	      //Aquí le pasamos los datos  numéricos que conseguimos previamente
+              data:[numPeaton, numMoto, numPasajero, numCiclista, numConductor],
+              //indicamos los colores para cada 
+	      backgroundColor:[ 
+                'rgb(219,34,52)',  
+                'rgb(31,55,222)',
+                'rgb(52,201,60)',
+                'rgb(213,0,10)',
+                'rgb(224,236,4)',
+              ]
+            }],
+            },
+	  //Aquí indicamos toda la configuración opcional de la gráfica
+          options:{
+            //Ajustamos la escala
+	    scales:{
+              yAxes:[{
+                ticks:{
+	          //indicamos la orientación
+                  beginAtZero:true
+                }
+              }]
+            },
+	    //Le indicamos que el canvas sea responsivo 
+            responsive:true
+          }
+      });
+      //Con ésta función le decimos que se actualice el canvas con la nueva configuración
+      myChart.update();
+      
+      //Éste canvas es análogo
+      myChart1 = new Chart(ctx1, {
+          type:"bar",
+          data: {
+            labels:['CAIDA','COLISION','ATROPELLADO','TRÁNSITO VEHICULAR'],
+            datasets:[{
+              label:'Tipo de delito',
+              data:[caida, colision,atropellado,transito],
+              backgroundColor:[
+                'rgb(219,34,52)',
+                'rgb(31,55,222)',
+                'rgb(52,201,60)',
+                'rgb(213,0,10)',
+                'rgb(224,236,4)',
+              ]
+            }],
+            },
+          options:{
+            scales:{
+              yAxes:[{
+                ticks:{
+                  beginAtZero:true
+                }
+              }]
+            },
+            responsive:true
+          }
+      });
+      myChart1.update();
+      
+
+     }
+   }
+   //...
+```
+Con ésto obtendriamos lo siguiente en nuestra página:  
+
 
 
 # Referencias
