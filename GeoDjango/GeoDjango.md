@@ -712,6 +712,25 @@ Notemos que en nuestro html tenemos
 ```  
 Tenemos dos canvas donde se dibujarán nuestras gráficas, ahora debemos inicializarlas en el código JS.  
 
+```javascript
+    var myChart;
+    var myChart1;
+    function graficar(datos, delito){
+      var jsonData = JSON.stringify(datos)
+      var delitoData = JSON.stringify(delito)
+
+
+      var ctx = document.getElementById("myChartGraph").getContext("2d")
+      var ctx1 = document.getElementById("myChartGraph1").getContext("2d")
+
+      if(myChart != null && myChart1 != null){
+        myChart.destroy();
+        myChart1.destroy();
+      }
+    //... 
+     }  
+```  
+Debemos crear la variable a la cual asignar los canvas, dado que estamos recibiendo dos arreglos usamos la función de JS JSON.stringify() para convertir el arreglo en una cadena, después usamos el método document.getElementById() para regresar un objeto de tipo **Element** que representa el elemento cuyo id coincide con la cadena y getContext es un método de canvas de html para devolver un "contexto de dibujo" y con 2d le estamos indicando que el tipo de contexto es de dos dimensiones. Con la estructura **if** checamos si ya estaba previamente inicializada y de ser así la destruimos para poder volver a usar el canvas y  que los datos se sobreescriban de forma correcta.
 
 
 # Referencias
