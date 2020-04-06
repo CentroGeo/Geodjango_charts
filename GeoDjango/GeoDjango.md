@@ -878,6 +878,26 @@ Con ésto obtendriamos lo siguiente en nuestra página:
 </p> 
 
 ## Formularios para agregar datos a una tabla ##
+Veremos cómo crear un formulario básico para cargar puntos a una tabla para ello nos iremos a nuestra clase **app.primeraVista.models.py**, crearemos un modelo llamado TablaPuntosEjemplo de la siguiente forma:  
+
+```python
+class TablaPuntosEjemplo(geomodels.Model):
+	"""docstring for TablaPuntosEjemplo"""
+	id_punto = models.AutoField(primary_key=True)
+	descripcion_punto = models.CharField(max_length=200)
+	coordenadas_punto = geomodels.PointField(srid=4326, default=None, null=True)
+
+```  
+Con lo que tenemos un **id_punto autoincrementable**, una **descripcion_punto** de nuestro punto donde podemos incluir alguna referencia
+y por último un atributo llamado **coordenadas_punto** en el cual agregaremos una geometría de tipo punto la cual estará el sistema de referencia **4326** puede ser nula y por defecto es de tipo None.  
+Recordemos que ésto nos hará el mapeo a una tabla en postgres, por lo cual debemos aplicar los comandos de **makemigration** y **migration**.  
+<p align="center"> 
+<img src="../img/modelo-puntos.png">
+</p>  
+<p align="center"> 
+<img src="../img/migrations-point-model.png">
+</p>
+
 
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2019, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
