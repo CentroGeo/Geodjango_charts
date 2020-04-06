@@ -945,9 +945,15 @@ class AddPointForm(forms.Form):
     descripcion = forms.CharField(max_length=200)
     punto = forms.CharField(max_length=200)
     def clean_punto(self):
-        coordenadas = self.cleaned_data['punto']
-        latitud, longitud = coordenadas.split(', ', 1)
-        return GEOSGeometry('POINT('+longitud+' '+latitud+')')
+        coordinates = self.cleaned_data['punto']
+        latitude, longitude = coordinates.split(', ', 1)
+        if(latitude == None or longitude == None):
+
+            raise forms.ValidationError("No se puede generar un punto con longitud o latitud inválida")
+        else:
+
+        	return GEOSGeometry('POINT('+longitude+' '+latitude+')')
+
 ```
 
 Donde cada atributo denotará un campo del formulario en el html, entonces por ejemplo descripción al igual que en el modelo, será un atributo del formulario de tipo caracter de longitud 200, por otro lado punto será un atributo de tipo cadena a diferencia del atributo correspondiente a punto en el modelo. En éste punto podrías preguntarte ¿no deben coincidir los tipos de dato del formulario con los del modelo?, en principio sí, pero en la realidad es que pueden no coincidir pero debemos hacer unos ajustes para que todo funcione correctamente.  
