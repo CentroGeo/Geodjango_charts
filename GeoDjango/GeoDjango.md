@@ -878,6 +878,121 @@ Con ésto obtendriamos lo siguiente en nuestra página:
 </p> 
 
 ## Formularios para agregar datos a una tabla ##
+Veremos cómo crear un formulario básico para cargar puntos a una tabla para ello nos iremos a nuestra clase **app/primeraVista/models.py**, crearemos un modelo llamado TablaPuntosEjemplo de la siguiente forma:  
+
+
+
+```python
+class TablaPuntosEjemplo(geomodels.Model):
+	"""docstring for TablaPuntosEjemplo"""
+	id_punto = models.AutoField(primary_key=True)
+	descripcion_punto = models.CharField(max_length=200)
+	coordenadas_punto = geomodels.PointField(srid=4326, default=None, null=True)
+
+```  
+Con lo que tenemos un **id_punto autoincrementable**, una **descripcion_punto** de nuestro punto donde podemos incluir alguna referencia
+y por último un atributo llamado **coordenadas_punto** en el cual agregaremos una geometría de tipo punto la cual estará el sistema de referencia **4326** puede ser nula y por defecto es de tipo None.  
+Recordemos que ésto nos hará el mapeo a una tabla en postgres, por lo cual debemos aplicar los comandos de **makemigration** y **migration**.  
+<p align="center"> 
+<img src="../img/modelo-puntos.png">
+</p>  
+<p align="center"> 
+<img src="../img/migrations-point-model.png">
+</p>
+
+Antes de crear la vista debemos crear el formulario para agrear el punto, para ello crearemos un archivo dentro de la carpeta **app/primeraVista/** , con lo que tendremos la estructura:  
+```
+Geodjango_charts/
+└── prueba/
+   ├── manage.py
+   ├── app/
+       └── vistaPrincipal/
+          └── migrations/
+          └── admin.py
+          └── app.py
+          └── models.py
+          └── tests.py
+          └── views.py
+          └── urls.py
+	  └── forms.py
+       └── __init__.py
+   ├── prueba/
+       └── __init__.py
+       └── __pycache__
+       └── settings.py
+       └── urls.py
+       └── wsgi.py
+    ├── templates/
+      └── primeraVista
+        └──home.html
+    ├── static/
+      └── img/
+      └── js/
+        └──datos.js
+        └──heatmap.js
+        └──leaflet-heatmap.js
+      └── css/
+        └──mapa.css
+```    
+Dentro de nuestro archivo **forms.py** tendremos el siguiente código:  
+
+```python   
+from django.contrib.gis import forms
+from .models import * 
+from django.contrib.gis.geos import GEOSGeometry
+import re
+class AddPointForm(forms.Form): 
+    descripcion = forms.CharField(max_length=200)
+    punto = forms.CharField(max_length=200)
+    def clean_punto(self):
+        coordinates = self.cleaned_data['punto']
+        latitude, longitude = coordinates.split(',', 1)
+        coord_expr = re.compile('^[-]*[0-9]+.[0-9]*$')
+        if((latitude == None or longitude == None) or not(coord_expr.match(latitude) and coord_expr.match(longitude))):
+            print("entra al error")
+            raise forms.ValidationError("No se puede generar un punto con longitud o latitud inválida")
+        else:
+
+        	return GEOSGeometry('POINT('+longitude+' '+latitude+')')
+	
+
+```
+
+Donde cada atributo denotará un campo del formulario en el html, entonces por ejemplo descripción al igual que en el modelo, será un atributo del formulario de tipo caracter de longitud 200, por otro lado punto será un atributo de tipo cadena a diferencia del atributo correspondiente a punto en el modelo. En éste punto podrías preguntarte ¿no deben coincidir los tipos de dato del formulario con los del modelo?, en principio sí, pero en la realidad es que pueden no coincidir pero debemos hacer unos ajustes para que todo funcione correctamente.  
+
+Como podemos observar tenemos un método **clean_punto** donde asignamos a **coordinates** el valor que reciba de el campo 'punto' del formulario, después parseamos la cadena a través de la coma ',' y con un max_split de 1, es decir solo debe dividir en dos el valor separado por coma; así una vez tengamos éstos valores asignanos haremos uso del API GEOSGeometry que se encargará de generar la geometría con los valores de latitud longitud que le estemos pasando.  
+
+
+Ahora creemos la vista correspondiente, pero lo haremos de una forma equivalente para cubrir ambas en el curso, nos iremos al archivo **app/primeraVista/views.py**.  
+
+Importamos las views de django **from django.views import View**, con ésto podemos hacer lo que se conoce **Clases como vistas** en lugar de lo que hicimos previamente que es conocido como **Funciones como vistas**, en otras palabras, ahora nuestras vistas pasan de ser funciones a clases, y al ser clases heredan todo lo de **programación orientada a objetos** de python (referencia ). Por otro lado también debemos importar el formulario que creamos previamente **from .forms import  AddPointForm** asignando eso al contexto, por último debemos renderizar el template crear_punto.html con el contexto que hemos definido previamente (el form).
+
+```python   
+#...
+class AgregarPuntos(View):
+    def get(self, request):
+        form = AddPointForm()
+        context = {"form": form}
+        return render(request, 'primeraVista/crear_punto.html', context)  
+    def post(self, request):
+        form = AddPointForm(request.POST, request.FILES)
+        print(form)
+        if not form.is_valid():
+            context = {"form": form}
+            return render(request, 'primeraVista/create_point.html', context)
+            
+        TablaPuntosEjemplo.objects.create(
+            descripcion_punto = form.cleaned_data["descripcion"],
+            coordenadas_punto = form.cleaned_data["punto"],
+            
+        )
+        return render(request, 'primeraVista/exito.html')
+```  
+Explicaremos paso a paso el código de arriba, primero al igual que en las funciones vistas previamente, necesitaremos definir las funciones get y post (al menos), empezando por **get** tenemos que instanciar el formulario que creamos previamente, asignarlo al contexto y aplicar **render** sobre el html y ese contexto para mostrar el formulario en el navegador.  
+Por otro lado para el método **post** debemos instanciar el formulario con los datos del **request** y nos interesa verificar si contiene algún error en la entrada para controlar y mitigar potenciales errores, por tanto hacemos uso del método **form.is_valid()** el cual verificará si el formulario contiene errores o en otro caso es válido, pero como queremos cazar errores entonces usaremos la negación lógica de la condición qudeando de la siguiente forma **if not form.is_valid():** la cual nos garantiza que el código del interior de ese bloque se ejcutará en caso de que el form contega un error. Al volver a hacer render sobre el mismo html, con el contexto nuevo que ahora sabemos contiene un error, se desplegará un mensaje correspondiente al error, ésto surge de checar en la clase AddPointForm si la latitud o longitud es inválida, ejemplo:  
+
+
+
 
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2019, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
