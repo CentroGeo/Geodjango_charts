@@ -880,6 +880,8 @@ Con ésto obtendriamos lo siguiente en nuestra página:
 ## Formularios para agregar datos a una tabla ##
 Veremos cómo crear un formulario básico para cargar puntos a una tabla para ello nos iremos a nuestra clase **app/primeraVista/models.py**, crearemos un modelo llamado TablaPuntosEjemplo de la siguiente forma:  
 
+
+
 ```python
 class TablaPuntosEjemplo(geomodels.Model):
 	"""docstring for TablaPuntosEjemplo"""
@@ -897,6 +899,43 @@ Recordemos que ésto nos hará el mapeo a una tabla en postgres, por lo cual deb
 <p align="center"> 
 <img src="../img/migrations-point-model.png">
 </p>
+
+Antes de crear la vista debemos crear el formulario para agrear el punto, para ello crearemos un archivo dentro de la carpeta *app/primeraVista/**, con lo que tendremos la estructura:  
+```
+Geodjango_charts/
+└── prueba/
+   ├── manage.py
+   ├── app/
+       └── vistaPrincipal/
+          └── migrations/
+          └── admin.py
+          └── app.py
+          └── models.py
+          └── tests.py
+          └── views.py
+          └── urls.py
+	  └── forms.py
+       └── __init__.py
+   ├── prueba/
+       └── __init__.py
+       └── __pycache__
+       └── settings.py
+       └── urls.py
+       └── wsgi.py
+    ├── templates/
+      └── primeraVista
+        └──home.html
+    ├── static/
+      └── img/
+      └── js/
+        └──datos.js
+        └──heatmap.js
+        └──leaflet-heatmap.js
+      └── css/
+        └──mapa.css
+```    
+
+
 
 Ahora creemos la vista correspondiente, pero lo haremos de una forma equivalente para cubrir ambas en el curso, nos iremos al archivo **app/primeraVista/views.py**.  
 
@@ -923,7 +962,6 @@ class AgregarPuntos(View):
         )
         return render(request, 'primeraVista/exito.html')
 ```  
-
-
+Explicaremos paso a paso el código de arriba, primero al igual que en las funciones vistas previamente, necesitaremos definir las funciones get y post (al menos), empezando por **get** tenemos que instanciar un formulario
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2019, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
