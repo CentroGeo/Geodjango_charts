@@ -899,7 +899,8 @@ Recordemos que ésto nos hará el mapeo a una tabla en postgres, por lo cual deb
 </p>
 Ahora creemos la vista correspondiente, pero lo haremos de una forma equivalente para cubrir ambas en el curso, nos iremos al archivo **app/primeraVista/views.py**.  
 Importamos las views de django **from django.views import View**, con ésto podemos hacer lo que se conoce **Clases como vistas** en lugar de lo que hicimos previamente que es conocido como **Funciones como vistas**, en otras palabras, ahora nuestras vistas pasan de ser funciones a clases, y al ser clases heredan todo lo de **programación orientada a objetos** de python (referencia )  
-```python
+
+```python   
 #...
 class AgregarPuntos(View):
     def get(self, request):
