@@ -876,6 +876,7 @@ Con ésto obtendriamos lo siguiente en nuestra página:
 <p align="center"> 
 <img src="../img/charts.png">
 </p> 
+
 ## Formularios para agregar datos a una tabla ##
 
 # Referencias
