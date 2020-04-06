@@ -1042,28 +1042,9 @@ urlpatterns = [
 Como podremos observar tenemos dos imports nuevos, que corresponden a las bibliotecas o APIS que debemos llamar para poder trabar con nuestras clases como vistas, y es importante  notar  que agregamos un path a nuestro **urlpatterns**, distinto a los anteriores, en el primer parámetro estamos definiendo la ruta para la clase, es decir, la que debemos escribir en el navegador, el segundo parámetro nos ayuda a decirle a **djando** que queremos cargar una clase como vista con ayuda del método **as_view()** de views y el último parámetro es una etiqueta con la cual vamos a acceder a esa ruta desde el html.  
 Para un mejor ahora veremos los html, con lo cual debemos crear 2 nuevos dentro de nuestra carpeta **templates/primeraVista**, uno lo llamaremos **crear_punto.html** y otro **exito.html**, primero analizemos **crear_punto.html**:  
 
-```html
-<!DOCTYPE html>
-	<html>
-	<head>
-		<<title>Agregar punto</title>>	
-	</head>
-	<body>
-		<h1>Agregar un punto</h1>
-		<form action="./crear-punto" method="POST">
-		    {% csrf_token %}
-		    {% for field in form %}
-		    	<div class="add_point_input">
-		        	{{ field.label_tag }}
-		        	{{ field }}
-		    		{{ field.errors }}
-		    	</div>
-		    {% endfor %}
-		    <input value="Confirmar" type="submit">
-		</form>
-	</body>
-	</html>
-```  
+<p align="center"> 
+<img src="../img/crear_punto.png">
+</p>  
 
 Aquí solo definiremos un formulario a través de la etiqueta de html <form></form>, en la cual podremos observar que tiene action="./crear-punto" en el cual debemos indicarle la ruta que debe tomar el form para enviar la petición POST, en method="POST" le estamos indicando bajo qué método http enviará la petición como vimos previamente en el curso.  
 Ahora con ayuda de un for iteramos el form que enviamos como context, en el cual indicamos el label_tag que corresponde al nombre del atributo dentro el form, el campo donde se introducirá y el mensaje de error en caso de existir.  
