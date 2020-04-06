@@ -991,7 +991,12 @@ class AgregarPuntos(View):
 Explicaremos paso a paso el código de arriba, primero al igual que en las funciones vistas previamente, necesitaremos definir las funciones get y post (al menos), empezando por **get** tenemos que instanciar el formulario que creamos previamente, asignarlo al contexto y aplicar **render** sobre el html y ese contexto para mostrar el formulario en el navegador.  
 Por otro lado para el método **post** debemos instanciar el formulario con los datos del **request** y nos interesa verificar si contiene algún error en la entrada para controlar y mitigar potenciales errores, por tanto hacemos uso del método **form.is_valid()** el cual verificará si el formulario contiene errores o en otro caso es válido, pero como queremos cazar errores entonces usaremos la negación lógica de la condición qudeando de la siguiente forma **if not form.is_valid():** la cual nos garantiza que el código del interior de ese bloque se ejcutará en caso de que el form contega un error. Al volver a hacer render sobre el mismo html, con el contexto nuevo que ahora sabemos contiene un error, se desplegará un mensaje correspondiente al error, ésto surge de checar en la clase AddPointForm si la latitud o longitud es inválida, ejemplo:  
 
-
+<p align="center"> 
+<img src="../img/form-punto.png">
+</p>  
+<p align="center"> 
+<img src="../img/form-punto-error.png">
+</p> 
 
 
 # Referencias
