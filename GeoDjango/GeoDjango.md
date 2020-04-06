@@ -878,7 +878,7 @@ Con ésto obtendriamos lo siguiente en nuestra página:
 </p> 
 
 ## Formularios para agregar datos a una tabla ##
-Veremos cómo crear un formulario básico para cargar puntos a una tabla para ello nos iremos a nuestra clase **app.primeraVista.models.py**, crearemos un modelo llamado TablaPuntosEjemplo de la siguiente forma:  
+Veremos cómo crear un formulario básico para cargar puntos a una tabla para ello nos iremos a nuestra clase **app/primeraVista/models.py**, crearemos un modelo llamado TablaPuntosEjemplo de la siguiente forma:  
 
 ```python
 class TablaPuntosEjemplo(geomodels.Model):
@@ -897,6 +897,29 @@ Recordemos que ésto nos hará el mapeo a una tabla en postgres, por lo cual deb
 <p align="center"> 
 <img src="../img/migrations-point-model.png">
 </p>
+Ahora creemos la vista correspondiente, pero lo haremos de una forma equivalente para cubrir ambas en el curso, nos iremos al archivo **app/primeraVista/views.py**.  
+Importamos las views de django **from django.views import View**, con ésto podemos hacer lo que se conoce **Clases como vistas** en lugar de lo que hicimos previamente que es conocido como **Funciones como vistas**, en otras palabras, ahora nuestras vistas pasan de ser funciones a clases, y al ser clases heredan todo lo de **programación orientada a objetos** de python (referencia )  
+```python
+#...
+class AgregarPuntos(View):
+    def get(self, request):
+        form = AddPointForm()
+        context = {"form": form}
+        return render(request, 'primeraVista/crear_punto.html', context)  
+    def post(self, request):
+        form = AddPointForm(request.POST, request.FILES)
+        print(form)
+        if not form.is_valid():
+            context = {"form": form}
+            return render(request, 'primeraVista/create_point.html', context)
+            
+        TablaPuntosEjemplo.objects.create(
+            descripcion_punto = form.cleaned_data["descripcion"],
+            coordenadas_punto = form.cleaned_data["punto"],
+            
+        )
+        return render(request, 'primeraVista/exito.html')
+```  
 
 
 # Referencias
