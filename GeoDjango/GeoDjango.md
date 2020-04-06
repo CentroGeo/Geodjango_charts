@@ -1047,7 +1047,24 @@ Para un mejor ahora veremos los html, con lo cual debemos crear 2 nuevos dentro 
 </p>  
 
 Aquí solo definiremos un formulario a través de la etiqueta de html <form></form>, en la cual podremos observar que tiene action="./crear-punto" en el cual debemos indicarle la ruta que debe tomar el form para enviar la petición POST, en method="POST" le estamos indicando bajo qué método http enviará la petición como vimos previamente en el curso.  
-Ahora con ayuda de un for iteramos el form que enviamos como context, en el cual indicamos el label_tag que corresponde al nombre del atributo dentro el form, el campo donde se introducirá y el mensaje de error en caso de existir.  
+Ahora con ayuda de un for iteramos el form que enviamos como context, en el cual indicamos el label_tag que corresponde al nombre del atributo dentro el form, el campo donde se introducirá y el mensaje de error en caso de existir. 
 
+por otro lado solo necesitaremos crear un html llamado **exito.html**
+
+```html
+
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Éxito</title>	
+	</head>
+	<body>
+		<h1>Punto agregado correctamente</h1>
+		
+	</body>
+	</html>
+``` 
+
+Así, tendremos nuestro formulario para agregar puntos a nuestra tabla de puntos.  
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2019, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
