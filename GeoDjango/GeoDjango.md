@@ -940,19 +940,21 @@ Dentro de nuestro archivo **forms.py** tendremos el siguiente código:
 from django.contrib.gis import forms
 from .models import * 
 from django.contrib.gis.geos import GEOSGeometry
-
+import re
 class AddPointForm(forms.Form): 
     descripcion = forms.CharField(max_length=200)
     punto = forms.CharField(max_length=200)
     def clean_punto(self):
         coordinates = self.cleaned_data['punto']
-        latitude, longitude = coordinates.split(', ', 1)
-        if(latitude == None or longitude == None):
-
+        latitude, longitude = coordinates.split(',', 1)
+        coord_expr = re.compile('^-[0-9]+.[0-9]*$')
+        if((latitude == None or longitude == None) or not(coord_expr.match(latitude) and coord_expr.match(longitude))):
+            print("entra al error")
             raise forms.ValidationError("No se puede generar un punto con longitud o latitud inválida")
         else:
 
         	return GEOSGeometry('POINT('+longitude+' '+latitude+')')
+	
 
 ```
 
