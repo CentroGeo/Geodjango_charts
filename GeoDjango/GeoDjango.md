@@ -999,11 +999,13 @@ Por otro lado para el método **post** debemos instanciar el formulario con los 
 </p> 
 En otro caso, si ingresamos un punto válido obtendremos lo siguiente:  
 <p align="center"> 
-<img src="../img/punto-correcto.png">
-</p>  
 <p align="center"> 
 <img src="../img/correcto.png">
 </p> 
+.  
+<img src="../img/punto-correcto.png">
+</p>  
+
 
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2019, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
