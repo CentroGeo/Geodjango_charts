@@ -988,6 +988,7 @@ class AgregarPuntos(View):
         )
         return render(request, 'primeraVista/exito.html')
 ```  
+
 Explicaremos paso a paso el código de arriba, primero al igual que en las funciones vistas previamente, necesitaremos definir las funciones get y post (al menos), empezando por **get** tenemos que instanciar el formulario que creamos previamente, asignarlo al contexto y aplicar **render** sobre el html y ese contexto para mostrar el formulario en el navegador.  
 Por otro lado para el método **post** debemos instanciar el formulario con los datos del **request** y nos interesa verificar si contiene algún error en la entrada para controlar y mitigar potenciales errores, por tanto hacemos uso del método **form.is_valid()** el cual verificará si el formulario contiene errores o en otro caso es válido, pero como queremos cazar errores entonces usaremos la negación lógica de la condición qudeando de la siguiente forma **if not form.is_valid():** la cual nos garantiza que el código del interior de ese bloque se ejcutará en caso de que el form contega un error. Al volver a hacer render sobre el mismo html, con el contexto nuevo que ahora sabemos contiene un error, se desplegará un mensaje correspondiente al error, ésto surge de checar en la clase AddPointForm si la latitud o longitud es inválida, ejemplo:  
 
@@ -999,13 +1000,73 @@ Por otro lado para el método **post** debemos instanciar el formulario con los 
 </p> 
 En otro caso, si ingresamos un punto válido obtendremos lo siguiente:  
 <p align="center"> 
-<p align="center"> 
+
 <img src="../img/correcto.png">
 </p> 
 .  
+<p align="center"> 
 <img src="../img/punto-correcto.png">
 </p>  
 
+**Nota, no funcionará todavía puesto que no hemos definido las rutas, pero lo cubriremos más adelante**  
+Ahora bien por último una vez que el form sea válido habremos generado nuestra geometría, y debemos usar el ORM
+para crear el objeto de la clase **TablaPuntosEjemplo** que corresponde a la parte dentro del método post  
+```python
+TablaPuntosEjemplo.objects.create(
+            descripcion_punto = form.cleaned_data["descripcion"],
+            coordenadas_punto = form.cleaned_data["punto"],
+            
+        )
+        return render(request, 'primeraVista/exito.html')
+```  
+donde estaremos guardando el elemento en nuestra tabla y  renderizando un html con el mensaje de éxito.  
+
+Por último para ésta parte solo nos queda **definir las rutas y los html para que funcione como las imágenes de ejemplo**, por lo cual abriremos el archivo **app/primeraVista/urls.py** el cual quedará de la siguiente forma:  
+
+```python
+from django.urls import path
+from django.conf.urls import url,include
+from app.vistaPrincipal.views import *
+from django.views import View
+from app.vistaPrincipal import views
+
+app_name = "app"
+
+urlpatterns = [
+    path('',index),
+    path('data/', data),
+    path("puntos/crear-punto", views.AgregarPuntos.as_view(), name="crear_punto"),
+]
+```  
+
+Como podremos observar tenemos dos imports nuevos, que corresponden a las bibliotecas o APIS que debemos llamar para poder trabar con nuestras clases como vistas, y es importante  notar  que agregamos un path a nuestro **urlpatterns**, distinto a los anteriores, en el primer parámetro estamos definiendo la ruta para la clase, es decir, la que debemos escribir en el navegador, el segundo parámetro nos ayuda a decirle a **djando** que queremos cargar una clase como vista con ayuda del método **as_view()** de views y el último parámetro es una etiqueta con la cual vamos a acceder a esa ruta desde el html.  
+Para un mejor ahora veremos los html, con lo cual debemos crear 2 nuevos dentro de nuestra carpeta **templates/primeraVista**, uno lo llamaremos **crear_punto.html** y otro **exito.html**, primero analizemos **crear_punto.html**:  
+
+```html
+<!DOCTYPE html>
+	<html>
+	<head>
+		<<title>Agregar punto</title>>	
+	</head>
+	<body>
+		<h1>Agregar un punto</h1>
+		<form action="./crear-punto" method="POST">
+		    {% csrf_token %}
+		    {% for field in form %}
+		    	<div class="add_point_input">
+		        	{{ field.label_tag }}
+		        	{{ field }}
+		    		{{ field.errors }}
+		    	</div>
+		    {% endfor %}
+		    <input value="Confirmar" type="submit">
+		</form>
+	</body>
+	</html>
+```  
+
+Aquí solo definiremos un formulario a través de la etiqueta de html <form></form>, en la cual podremos observar que tiene action="./crear-punto" en el cual debemos indicarle la ruta que debe tomar el form para enviar la petición POST, en method="POST" le estamos indicando bajo qué método http enviará la petición como vimos previamente en el curso.  
+Ahora con ayuda de un for iteramos el form que enviamos como context, en el cual indicamos el label_tag que corresponde al nombre del atributo dentro el form, el campo donde se introducirá y el mensaje de error en caso de existir.  
 
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2019, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
