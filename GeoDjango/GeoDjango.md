@@ -876,6 +876,7 @@ Con ésto obtendriamos lo siguiente en nuestra página:
 <p align="center"> 
 <img src="../img/charts.png">
 </p> 
+## Formularios para agregar datos a una tabla
 
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2019, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
