@@ -1043,7 +1043,7 @@ Como podremos observar tenemos dos imports nuevos, que corresponden a las biblio
 Para un mejor ahora veremos los html, con lo cual debemos crear 2 nuevos dentro de nuestra carpeta **templates/primeraVista**, uno lo llamaremos **crear_punto.html** y otro **exito.html**, primero analizemos **crear_punto.html**:  
 
 <p align="center"> 
-<img src="../img/crear_punto.png">
+<img src="../img/crear_punto.html.png">
 </p>  
 
 Aquí solo definiremos un formulario a través de la etiqueta de html <form></form>, en la cual podremos observar que tiene action="./crear-punto" en el cual debemos indicarle la ruta que debe tomar el form para enviar la petición POST, en method="POST" le estamos indicando bajo qué método http enviará la petición como vimos previamente en el curso.  
