@@ -947,7 +947,7 @@ class AddPointForm(forms.Form):
     def clean_punto(self):
         coordinates = self.cleaned_data['punto']
         latitude, longitude = coordinates.split(',', 1)
-        coord_expr = re.compile('^[-]*[0-9]+.[0-9]*$')
+        coord_expr = re.compile('^[-]*[0-9]+.[0-9]+$')
         if((latitude == None or longitude == None) or not(coord_expr.match(latitude) and coord_expr.match(longitude))):
             print("entra al error")
             raise forms.ValidationError("No se puede generar un punto con longitud o latitud inválida")
@@ -997,7 +997,13 @@ Por otro lado para el método **post** debemos instanciar el formulario con los 
 <p align="center"> 
 <img src="../img/form-punto-error.png">
 </p> 
-
+En otro caso, si ingresamos un punto válido obtendremos lo siguiente:  
+<p align="center"> 
+<img src="../img/punto-correcto.png">
+</p>  
+<p align="center"> 
+<img src="../img/correcto.png">
+</p> 
 
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2019, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
