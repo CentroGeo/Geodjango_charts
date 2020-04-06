@@ -900,7 +900,7 @@ Recordemos que ésto nos hará el mapeo a una tabla en postgres, por lo cual deb
 <img src="../img/migrations-point-model.png">
 </p>
 
-Antes de crear la vista debemos crear el formulario para agrear el punto, para ello crearemos un archivo dentro de la carpeta *app/primeraVista/**, con lo que tendremos la estructura:  
+Antes de crear la vista debemos crear el formulario para agrear el punto, para ello crearemos un archivo dentro de la carpeta **app/primeraVista/** , con lo que tendremos la estructura:  
 ```
 Geodjango_charts/
 └── prueba/
@@ -934,12 +934,30 @@ Geodjango_charts/
       └── css/
         └──mapa.css
 ```    
+Dentro de nuestro archivo **forms.py** tendremos el siguiente código:  
 
+```python   
+from django.contrib.gis import forms
+from .models import * 
+from django.contrib.gis.geos import GEOSGeometry
+
+class AddPointForm(forms.Form): 
+    descripcion = forms.CharField(max_length=200)
+    punto = forms.CharField(max_length=200)
+    def clean_punto(self):
+        coordenadas = self.cleaned_data['punto']
+        latitud, longitud = coordenadas.split(', ', 1)
+        return GEOSGeometry('POINT('+longitud+' '+latitud+')')
+```
+
+Donde cada atributo denotará un campo del formulario en el html, entonces por ejemplo descripción al igual que en el modelo, será un atributo del formulario de tipo caracter de longitud 200, por otro lado punto será un atributo de tipo cadena a diferencia del atributo correspondiente a punto en el modelo. En éste punto podrías preguntarte ¿no deben coincidir los tipos de dato del formulario con los del modelo?, en principio sí, pero en la realidad es que pueden no coincidir pero debemos hacer unos ajustes para que todo funcione correctamente.  
+
+Como podemos observar tenemos un método **clean_punto** donde asignamos a **coordinates** el valor que reciba de el campo 'punto' del formulario, después parseamos la cadena a través de la coma ',' y con un max_split de 1, es decir solo debe dividir en dos el valor separado por coma; así una vez tengamos éstos valores asignanos haremos uso del API GEOSGeometry que se encargará de generar la geometría con los valores de latitud longitud que le estemos pasando.  
 
 
 Ahora creemos la vista correspondiente, pero lo haremos de una forma equivalente para cubrir ambas en el curso, nos iremos al archivo **app/primeraVista/views.py**.  
 
-Importamos las views de django **from django.views import View**, con ésto podemos hacer lo que se conoce **Clases como vistas** en lugar de lo que hicimos previamente que es conocido como **Funciones como vistas**, en otras palabras, ahora nuestras vistas pasan de ser funciones a clases, y al ser clases heredan todo lo de **programación orientada a objetos** de python (referencia )  
+Importamos las views de django **from django.views import View**, con ésto podemos hacer lo que se conoce **Clases como vistas** en lugar de lo que hicimos previamente que es conocido como **Funciones como vistas**, en otras palabras, ahora nuestras vistas pasan de ser funciones a clases, y al ser clases heredan todo lo de **programación orientada a objetos** de python (referencia ). Por otro lado también debemos importar el formulario que creamos previamente **from .forms import  AddPointForm** asignando eso al contexto, por último debemos renderizar el template crear_punto.html con el contexto que hemos definido previamente (el form).
 
 ```python   
 #...
@@ -962,6 +980,6 @@ class AgregarPuntos(View):
         )
         return render(request, 'primeraVista/exito.html')
 ```  
-Explicaremos paso a paso el código de arriba, primero al igual que en las funciones vistas previamente, necesitaremos definir las funciones get y post (al menos), empezando por **get** tenemos que instanciar un formulario
+Explicaremos paso a paso el código de arriba, primero al igual que en las funciones vistas previamente, necesitaremos definir las funciones get y post (al menos), empezando por **get** tenemos que instanciar el formulario que creamos previamente
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2019, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
