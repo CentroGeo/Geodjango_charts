@@ -1093,7 +1093,7 @@ class Datos(models.Model):
 
 def image_directory_path(instance, filename):
     """El directorio donde se guardará la imagen"""
-    return f"sismo/images/{filename}"
+    return f"sismo/{filename}"
 
 class TablaPuntosEjemplo(geomodels.Model):
 	"""docstring for TablaPuntosEjemplo"""
@@ -1122,6 +1122,12 @@ Ahora abrimos nuestro archivo **settings.py** y agregamos
 <p align="center"> 
 <img src="../img/media-settings.png">
 </p> 
+
+por último crearemos una carpeta **media** a la altura del archivo **manage.py** y posteriormente dentro de **media** creamos una carpeta llamada **sismos**
+
+
+
+
 
 
 ## Breve introducción a la terminal shell para operaciones espaciales
