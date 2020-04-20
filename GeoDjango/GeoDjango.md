@@ -1107,6 +1107,22 @@ Como podremos observar hay cosas nuevas que explicaremos a continuación, empeza
 Por otro lado, agregamos un campo llamado imagen_punto el cual es una opción de los modelos de django para cargar imágenes como atributos, notemos que tiene un key_word llamado **upload_to** es ahí donde indicamos el directorio a donde guardar la imagen.  
 
 Ahora debemos configurar nuestro proyecto para indicarle la ruta de los archivos dinámicos, tales como las imágenes, entonces vamos a abrir nuestro archivo **urls.py** pero de la carpeta prueba y agregaremos la siguiente línea:  
+```python
+from django.contrib import admin
+from django.urls import path
+from django.conf.urls import url ,include
+from app.vistaPrincipal.urls import *
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('app.vistaPrincipal.urls')),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+```  
+Ahora abrimos nuestro archivo **settings.py** y agregamos 
+
+<p align="center"> 
+<img src="../img/pillow.png">
+</p> 
+
 
 ## Breve introducción a la terminal shell para operaciones espaciales
 
