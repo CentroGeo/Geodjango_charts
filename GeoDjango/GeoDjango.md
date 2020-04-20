@@ -1120,7 +1120,7 @@ urlpatterns = [
 Ahora abrimos nuestro archivo **settings.py** y agregamos 
 
 <p align="center"> 
-<img src="../img/mdeia-settings.png">
+<img src="../img/media-settings.png">
 </p> 
 
 
