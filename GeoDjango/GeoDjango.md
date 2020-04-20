@@ -1071,7 +1071,42 @@ Para ello debemos escribir en nuestra terminal lo siguiente:
 
 <p align="center"> 
 <img src="../img/pillow.png">
-</p> 
+</p>   
+Una vez instalado pillow, nos iremos a nuestro archivo **models.py** y agregaremos el campo de tipo imagen con lo que nuestro código quedaría de la siguiente forma:  
+
+```python
+from django.db import models
+from django.contrib.gis.db import models as geomodels
+from django.contrib.gis.db.models import PointField
+
+
+class Datos(models.Model):
+    id = models.IntegerField(primary_key=True)    	
+    geom = geomodels.MultiPointField()
+    field_1 = models.IntegerField()
+    id_ssc = models.IntegerField()
+    id_pgj = models.IntegerField()
+    delito = models.CharField(max_length = 100)
+    tipo_evento = models.CharField(max_length = 100)	
+    fecha = models.DateTimeField()	
+    identidad = models.CharField(max_length = 100)
+
+def image_directory_path(instance, filename):
+    """El directorio donde se guardará la imagen"""
+    return f"sismo/images/{filename}"
+
+class TablaPuntosEjemplo(geomodels.Model):
+	"""docstring for TablaPuntosEjemplo"""
+	id_puntos = models.AutoField(primary_key=True)
+	descripcion_punto = models.CharField(max_length=200)
+	coordenadas_punto = geomodels.PointField(srid=4326, default=None, null=True)
+    imagen_punto = models.ImageField(upload_to=image_directory_path)
+    
+```  
+Como podremos observar hay cosas nuevas que explicaremos a continuación, empezando por la definición de la función **directorio_imagenes** la cual es una función donde indicamos la carpeta donde se guardarán las imágenes de los puntos, en el **return** le estamos indicando como sufijo la cadena **sismo/imagenes/** la cual explicaremos más adelante y como nombre del archivo le dejaremos de  momento el nombre que traiga que por defecto la imagen al cargarse, aquí podriamos darle una regex para renombrarla.  
+Por otro lado, agregamos un campo llamado imagen_punto el cual es una opción de los modelos de django para cargar imágenes como atributos, notemos que tiene un key_word llamado **upload_to** es ahí donde indicamos el directorio a donde guardar la imagen.  
+
+Ahora debemos configurar nuestro proyecto para indicarle la ruta de los archivos dinámicos, tales como las imágenes, entonces vamos a abrir nuestro archivo **urls.py** pero de la carpeta prueba y agregaremos la siguiente línea:  
 
 ## Breve introducción a la terminal shell para operaciones espaciales
 
