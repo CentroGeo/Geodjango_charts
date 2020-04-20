@@ -1134,9 +1134,39 @@ por último crearemos una carpeta **media** a la altura del archivo **manage.py*
 <img src="../img/carpeta-media.png">
 </p> 
 
-Ejecutamos el comando **python manage.py makemigrations**. Nos agregará el campo a nuestra tabla y solo nos quedará aplicar los cambios con **python manage.py migrate**.
+Ejecutamos el comando **python manage.py makemigrations**. Nos agregará el campo a nuestra tabla y solo nos quedará aplicar los cambios con **python manage.py migrate**.  
 
-En nuestro formulario agregaremos el campo para la imagen:
+En nuestro formulario agregaremos el campo para la imagen, para ello iremos al archivo **forms.py**
+
+```python
+"""points forms."""
+# Django
+from django.contrib.gis import forms
+from .models import * 
+from django.contrib.gis.geos import GEOSGeometry
+import re
+class AddPointForm(forms.Form): 
+    descripcion = forms.CharField(max_length=200)
+    punto = forms.CharField(max_length=200)
+    imagen = forms.ImageField()
+
+    def clean_punto(self):
+        coordinates = self.cleaned_data['punto']
+        latitude, longitude = coordinates.split(',', 1)
+        latitude = latitude.strip()
+        longitude = longitude.strip()
+        coord_expr = re.compile('^[-]*[0-9]+.[0-9]+$')
+        if((latitude == None or longitude == None) or not(coord_expr.match(latitude) and coord_expr.match(longitude))):
+            print("entra al error")
+            raise forms.ValidationError("No se puede generar un punto con longitud o latitud inválida")
+        else:
+
+        	return GEOSGeometry('POINT('+longitude+' '+latitude+')')
+```
+
+
+
+
 <p align="center"> 
 <img src="../img/Punto-imagen.png">
 </p> 
