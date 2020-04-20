@@ -1100,7 +1100,7 @@ class TablaPuntosEjemplo(geomodels.Model):
 	id_puntos = models.AutoField(primary_key=True)
 	descripcion_punto = models.CharField(max_length=200)
 	coordenadas_punto = geomodels.PointField(srid=4326, default=None, null=True)
-    imagen_punto = models.ImageField(upload_to=image_directory_path)
+	imagen_punto = models.ImageField(upload_to=image_directory_path, default=None)
     
 ```  
 Como podremos observar hay cosas nuevas que explicaremos a continuación, empezando por la definición de la función **directorio_imagenes** la cual es una función donde indicamos la carpeta donde se guardarán las imágenes de los puntos, en el **return** le estamos indicando como sufijo la cadena **sismo/imagenes/** la cual explicaremos más adelante y como nombre del archivo le dejaremos de  momento el nombre que traiga que por defecto la imagen al cargarse, aquí podriamos darle una regex para renombrarla.  
@@ -1112,6 +1112,9 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url ,include
 from app.vistaPrincipal.urls import *
+from django.conf.urls.static import static
+from django.conf import settings
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('app.vistaPrincipal.urls')),
@@ -1131,6 +1134,12 @@ por último crearemos una carpeta **media** a la altura del archivo **manage.py*
 <img src="../img/carpeta-media.png">
 </p> 
 
+Ejecutamos el comando **python manage.py makemigrations**. Nos agregará el campo a nuestra tabla y solo nos quedará aplicar los cambios con **python manage.py migrate**.
+
+En nuestro formulario agregaremos el campo para la imagen:
+<p align="center"> 
+<img src="../img/Punto-imagen.png">
+</p> 
 
 ## Breve introducción a la terminal shell para operaciones espaciales
 
