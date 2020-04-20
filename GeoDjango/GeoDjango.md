@@ -1065,8 +1065,20 @@ por otro lado solo necesitaremos crear un html llamado **exito.html**
 	</html>
 ``` 
 
-Así, tendremos nuestro formulario para agregar puntos a nuestra tabla de puntos.  
-## Breve introducción a la terminal shell para operaciones espaciales 
+Así, tendremos nuestro formulario para agregar puntos a nuestra tabla de puntos.
+Agregaremos un campo adicional para cargar imágenes por ejemplo, antes que nada, para hacer ésto debemos instalar a nuestro entorno la bibliotecta llamada **pillow** que sirve para el manejo y procesamiento de imágenes digitales en python.  
+Para ello debemos escribir en nuestra terminal lo siguiente:  
+
+<p align="center"> 
+<img src="../img/pillow.png">
+</p> 
+
+## Breve introducción a la terminal shell para operaciones espaciales
+
+Con el comando **python manage.py shell** abriremos una terminal interactiva de python con el motor preconfigurado con las credenciales que le pasamos en settins.py  
+Nuestra terminal deberá verse de la siguiente forma:  
+
+
 
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2019, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
