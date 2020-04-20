@@ -1127,7 +1127,9 @@ por último crearemos una carpeta **media** a la altura del archivo **manage.py*
 
 
 
-
+<p align="center"> 
+<img src="../img/carpeta-media.png">
+</p> 
 
 
 ## Breve introducción a la terminal shell para operaciones espaciales
