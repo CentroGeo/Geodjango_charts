@@ -1066,7 +1066,7 @@ por otro lado solo necesitaremos crear un html llamado **exito.html**
 ``` 
 
 Así, tendremos nuestro formulario para agregar puntos a nuestra tabla de puntos.  
-## Breve introducción a la terminal shell para operaciones espaciales##  
+## Breve introducción a la terminal shell para operaciones espaciales 
 
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2019, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
