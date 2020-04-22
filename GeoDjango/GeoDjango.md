@@ -1192,6 +1192,12 @@ Así también podemos usar otras representaciones como la codificación **hexade
 
 <p align="center"> 
 <img src="../img/hexa-shell.png">
+</p>
+
+Ahora con representación geojson  
+
+<p align="center"> 
+<img src="../img/geojson-shell.png">
 </p>  
 
 
