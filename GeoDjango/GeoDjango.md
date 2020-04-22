@@ -1191,7 +1191,7 @@ Crearemos nuestra primer geometría con representación **wkt**
 Así también podemos usar otras representaciones como la codificación **hexadecimal, geojson** , etc. Recordemos que el sistema hexadecimal es un sistema de numeración posicional base 16, es un sistema muy importante en cuanto al manejo interno de la memoria de la computadora aunque ese tema no será abordado a profundidad.  
 
 <p align="center"> 
-<img src="../img/hex-shell.png">
+<img src="../img/hexa-shell.png">
 </p>  
 
 
