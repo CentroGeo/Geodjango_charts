@@ -2,7 +2,7 @@
 Django es un framework de aplicaciones web  de código abierto para el lenguaje  Python, dada la tendencia actual Python empieza a ser uno de los lenguajes mas usados hoy en día, la tendencia va la alza por su facilidad de entendimiento y la comunidad del lenguaje.  
 
 ## Objetivo ##  
-El objetivo de éste curso es aprender a montar una aplicación web con Django y  las herramientas Leaflet y ChartJs.  
+El objetivo de éste curso es aprender a montar una aplicación web básica con Django, junto con las herramientas Leaflet y ChartJs.  
 ## Activación del proyecto ##  
 **conda activate entorno**  
 ## Creación de proyecto ## 
@@ -1172,6 +1172,8 @@ class AddPointForm(forms.Form):
 </p> 
 
 ## Breve introducción a la terminal shell para operaciones espaciales
+
+### GEOSGeometry
 
 Con el comando **python manage.py shell** abriremos una terminal interactiva de python con el motor preconfigurado con las credenciales que le pasamos en settins.py  
 Nuestra terminal deberá verse de la siguiente forma:  
