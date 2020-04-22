@@ -1188,7 +1188,12 @@ Crearemos nuestra primer geometría con representación **wkt**
 <img src="../img/wtk-shell.png">
 </p>  
 
-Así también podemos usar otras representaciones como la codificación **hexadecimal, geojson** , etc.
+Así también podemos usar otras representaciones como la codificación **hexadecimal, geojson** , etc. Recordemos que el sistema hexadecimal es un sistema de numeración posicional base 16, es un sistema muy importante en cuanto al manejo interno de la memoria de la computadora aunque ese tema no será abordado a profundidad.  
+
+<p align="center"> 
+<img src="../img/hex-shell.png">
+</p>  
+
 
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2020, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
