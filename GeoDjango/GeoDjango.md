@@ -1206,6 +1206,13 @@ Otra forma de crear objetos es usar directamente los constructores (un construct
 <img src="../img/punto-shell.png">
 </p>  
 
+Podemos pasar explicitamente el sistema de referencia en los parámetros, además, los objetos geométricos pueden ser tratados e iterados como cualquier otro objeto en python.  
+
+
+<p align="center"> 
+<img src="../img/lista-comprension-1.png">
+</p>  
+
 
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2020, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
