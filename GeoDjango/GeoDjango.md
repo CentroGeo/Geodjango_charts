@@ -1185,7 +1185,7 @@ Nuestra terminal deberá verse de la siguiente forma:
 
 Crearemos nuestra primer geometría con representación **wkt**  
 <p align="center"> 
-<img src="../img/wkt-shell.png">
+<img src="../img/wtk-shell.png">
 </p>
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2020, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
