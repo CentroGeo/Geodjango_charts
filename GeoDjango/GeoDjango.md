@@ -1210,7 +1210,7 @@ Podemos pasar explicitamente el sistema de referencia en los parámetros, ademá
 
 
 <p align="center"> 
-<img src="../img/lista-comprension-1.png">
+<img src="../img/listas-comprension-1.png">
 </p>  
 
 
