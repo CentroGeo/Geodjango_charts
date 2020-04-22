@@ -1203,7 +1203,7 @@ Ahora con representación geojson
 Otra forma de crear objetos es usar directamente los constructores (un constructor podemos pensarlo como un molde para crear objetos de cierto tipo) para crear objetos geométricos específicos, por ejemplo:  
 
 <p align="center"> 
-<img src="../img/point-shell.png">
+<img src="../img/punto-shell.png">
 </p>  
 
 
