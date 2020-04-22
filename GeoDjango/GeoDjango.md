@@ -1200,6 +1200,12 @@ Ahora con representación geojson
 <img src="../img/geojson-shell.png">
 </p>  
 
+Otra forma de crear objetos es usar directamente los constructores (un constructor podemos pensarlo como un molde para crear objetos de cierto tipo) para crear objetos geométricos específicos, por ejemplo:  
+
+<p align="center"> 
+<img src="../img/point-shell.png">
+</p>  
+
 
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2020, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
