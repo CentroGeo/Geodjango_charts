@@ -1173,11 +1173,15 @@ class AddPointForm(forms.Form):
 
 ## Breve introducción a la terminal shell para operaciones espaciales
 
-### GEOSGeometry
+### GEOSGeometry  
+**¿Qué es GEOSGeometry?** Es una biblioteca de código abierto que implementa las funcionalidades de OpenGIS para el manejo de predicados espaciales **SQL** y operadores espaciales.  
 
-Con el comando **python manage.py shell** abriremos una terminal interactiva de python con el motor preconfigurado con las credenciales que le pasamos en settins.py  
-Nuestra terminal deberá verse de la siguiente forma:  
+Antes de pasar al manejo en django, probaremos crear unas instancias brevemente en la terminal interactiva de python, para ello con el comando **python manage.py shell** abriremos una terminal.
+Nuestra terminal deberá verse de la siguiente forma: 
 
+<p align="center"> 
+<img src="../img/terminal-shell.png">
+</p>  
 
 
 # Referencias
