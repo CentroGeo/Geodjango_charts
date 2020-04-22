@@ -1218,7 +1218,9 @@ En el ejemplo estamos imprimiendo la coordenada por cada coordenada en el LineSt
 
 <p align="center"> 
 <img src="../img/srid-dinamico.png">
-</p> 
+</p>  
+
+De igual forma podemos asignar como en la imagen el srid de forma dinámica, ésto nos puede servir para asignar posteriormente el sistema de referencia.
 
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2020, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
