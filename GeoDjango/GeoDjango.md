@@ -1183,8 +1183,10 @@ Nuestra terminal deberá verse de la siguiente forma:
 <img src="../img/terminal-shell.png">
 </p>  
 
-
-
+Crearemos nuestra primer geometría con representación **wkt**  
+<p align="center"> 
+<img src="../img/wkt-shell.png">
+</p>
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2020, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
 2. Django Project, Django, Miércoles 22 Abril 2020, GEOSGeometry, https://docs.djangoproject.com/en/3.0/ref/contrib/gis/geos/#what-is-geos
