@@ -1213,6 +1213,12 @@ Podemos pasar explicitamente el sistema de referencia en los parámetros, ademá
 <img src="../img/listas-comprension-1.png">
 </p>  
 
+Las **listas por comprensión** es una forma abreviada que nos ofrece python para hacer algo con los objetos de una estructura de datos como listas o diccionarios.  
+En el ejemplo estamos imprimiendo la coordenada por cada coordenada en el LineString, éste, es un objeto iterable, es decir que podemos recorrer sus elementos.
+
+<p align="center"> 
+<img src="../img/srid-dinamico.png">
+</p> 
 
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2020, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
