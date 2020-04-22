@@ -1187,6 +1187,7 @@ Crearemos nuestra primer geometría con representación **wkt**
 <p align="center"> 
 <img src="../img/wtk-shell.png">
 </p>  
+
 Así también podemos usar otras representaciones como la codificación **hexadecimal, geojson** , etc.
 
 # Referencias
