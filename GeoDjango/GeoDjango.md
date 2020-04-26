@@ -1401,7 +1401,7 @@ Agregaremos unos pocos datos al mapa:
 	</p>  
 	Si lo queremos quitar solo debemos dejarlo de la siguiente forma:  
 	
-	```javascript
+	```javascript  
 	$.getJSON("../../../media/alcaldias.geojson", function (data) {
 	    var datalayer = L.geoJson(data, {
 
@@ -1411,7 +1411,18 @@ Agregaremos unos pocos datos al mapa:
 	    }).addTo(map2);
 	})
 	```  
-5. Puntos al mapa
+5. Puntos al mapa  
+	Ahora con ayuda de los métodos de leaflet, podemos agregar puntos de forma dinámica al mapa haciendo lo siguiente:  
+	```javascript  
+		//código previo
+		var popup = L.popup();
+		function onMapClick(e) {
+			console.log(e);
+			L.marker(e.latlng).addTo(map2)
+			.bindPopup("<b>Punto agregado</b><br/>").openPopup();
+		}
+		map2.on('click', onMapClick);
+	``` 
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2020, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
 2. Django Project, Django, Miércoles 22 Abril 2020, GEOSGeometry, https://docs.djangoproject.com/en/3.0/ref/contrib/gis/geos/#what-is-geos
