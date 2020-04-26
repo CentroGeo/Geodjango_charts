@@ -1321,7 +1321,7 @@ Agregaremos unos pocos datos al mapa:
 	a través de la función openPopup() indicamos que se abra en el mapa en cuando se agregue obteniendo lo siguiente:  
 	
 	<p align="center"> 
-	<img src="../img/mapa_02_inicial.png">
+	<img src="../img/marcador_mapa02.png">
 	</p>
 2. Un círculo  
 	Agregamos lo siguiente al código:  
@@ -1356,7 +1356,9 @@ Agregaremos unos pocos datos al mapa:
 	<img src="../img/poligono_mapa02.png">
 	</p>
 	
-4. Datos desde geojson
+4. Datos desde geojson  
+	Éste es un punto interesante, leaflet nos permite cargar geojson directamente, para ello primero vamos a bajar los datos  
+	del siguiente link: **https://datos.cdmx.gob.mx/explore/dataset/alcaldias/table/** 
 5. Puntos al mapa
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2020, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
