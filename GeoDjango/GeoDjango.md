@@ -1417,12 +1417,21 @@ Agregaremos unos pocos datos al mapa:
 		//código previo
 		var popup = L.popup();
 		function onMapClick(e) {
-			console.log(e);
 			L.marker(e.latlng).addTo(map2)
-			.bindPopup("<b>Punto agregado</b><br/>").openPopup();
+			.bindPopup("<b>Punto agregado</b> " + e.latlng.toString() ).openPopup();
 		}
 		map2.on('click', onMapClick);
-	``` 
+	```   
+	
+	No es muy dificil intuir el potencial que tiene ésto, **onMapClick()** se manda a llamar cada que hacemos click sobre el mapa  
+	de leaflet, en éste caso estamos agregando simplemente un punto al mapa y mostrando las coordenadas en un popup  
+	
+	
+	<p align="center"> 
+	<img src="../img/final.png">
+	</p>   
+	Lo que hagamos en la función onMapClick ya dependerá del uso que se le de a la aplicación, podríamos enviarlo a la base de  
+	datos para guardarlos a través de ajax, guardarlo en un formulario y enviarlo por **post**. Realmente su uso es muy escalable.
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2020, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
 2. Django Project, Django, Miércoles 22 Abril 2020, GEOSGeometry, https://docs.djangoproject.com/en/3.0/ref/contrib/gis/geos/#what-is-geos
