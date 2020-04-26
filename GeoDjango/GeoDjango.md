@@ -1377,6 +1377,40 @@ Agregaremos unos pocos datos al mapa:
 	</p>  
 	Ahora solo copiaremos a la carpeta media el archivo geojson generado  
 	
+	<p align="center"> 
+	<img src="../img/alcaldias.png">
+	</p>  
+	Una vez hecho ésto agregaremos el siguiente código:   
+	
+	```javascript    
+	//código previo
+	$.getJSON("../../../media/alcaldias.geojson", function (data) {
+    		var datalayer = L.geoJson(data, { 
+        		pointToLayer: function (feature, latlng) {
+            			return L.circleMarker(latlng, geojsonMarkerOptions)
+        		}	
+    		}).addTo(map2).bindPopup("<b>Delegación tlalpan</b><br/>").openPopup();
+	})
+	```
+	Notemos que con **/../../../** subimos hasta la raiz que correspondería a donde está el archivo **manage.py** es  
+	por ello que después escribimos **/media/alcaldias.geojson**, le estámos diciendo que todo el polígono muestre un popup  
+	con la leyenda delegación tlalpan si hacemos click sobre él:  
+	
+	<p align="center"> 
+	<img src="../img/tlalpan.png">
+	</p>  
+	Si lo queremos quitar solo debemos dejarlo de la siguiente forma:  
+	
+	```javascript
+	$.getJSON("../../../media/alcaldias.geojson", function (data) {
+	    var datalayer = L.geoJson(data, {
+
+		pointToLayer: function (feature, latlng) {
+		    return L.circleMarker(latlng, geojsonMarkerOptions)
+		}
+	    }).addTo(map2);
+	})
+	```  
 5. Puntos al mapa
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2020, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
