@@ -1261,7 +1261,7 @@ Notemos que debemos agregar las líneas sombreadas, ésto es algo que nos propor
 Para extender un archivo usaremos el tag sombreado, ahí indicamos el template que queremos extender y por consiguiente se nos cargarán todos los imports del **home** cuando hagamos ésto debemos tener cuidado de la redundancia y que probablemente extendamos algún archivo que tal vez ya no nos interese, sin embargo de momento omiteremos esos detalles.  
 
 <p align="center"> 
-<img src="../img/mapa_02-html.png.png">
+<img src="../img/mapa_02-html.png">
 </p>    
 
 ```html
