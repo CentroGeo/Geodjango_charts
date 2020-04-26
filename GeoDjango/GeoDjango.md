@@ -1260,6 +1260,22 @@ Notemos que debemos agregar las líneas sombreadas, ésto es algo que nos propor
 
 Para extender un archivo usaremos el tag sombreado, ahí indicamos el template que queremos extender y por consiguiente se nos cargarán todos los imports del **home** cuando hagamos ésto debemos tener cuidado de la redundancia y que probablemente extendamos algún archivo que tal vez ya no nos interese, sin embargo de momento omiteremos esos detalles.  
 
+<p align="center"> 
+<img src="../img/mapa_02-html.png.png">
+</p>    
+
+```html
+<div class="content">
+
+	<div class ='mapa-2' style="text-align: center;">
+        <div  id="mapid" style="min-zoom: 3;  display: inline-block; height: 500px; width: 550px;"></div>    
+    </div>
+	
+</div>
+
+```
+Omitiremos la explicación de la estructura html puesto que ya cubrimos esa parte previamente y nos enfocaremos al archivo **JS**.
+
 
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2020, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
