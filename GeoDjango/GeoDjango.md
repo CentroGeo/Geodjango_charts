@@ -1310,9 +1310,20 @@ Nuestro mapa deberá verse de la siguiente forma:
 </p>  
 
 Agregaremos unos pocos datos al mapa: 
-1. asd 
-2. asd
-
+1. Un punto   
+	Para ello agregamos lo siguiente al código:  
+	```javascript  
+	//código previo
+	L.marker([19.40, -99.14]).addTo(map2)
+		.bindPopup("<b>Aquí podemos poner elementos html</b><br />Soy un popup.").openPopup();
+	```   
+	Aquí estamos añadiendo un marcador con sus respectivas **Lat**, **Long**, un popUp con contenido html y
+	a través de la función openPopup() indicamos que se abra en el mapa en cuando se agregue obteniendo lo siguiente:  
+	
+2. Un círculo
+3. Un polígono
+4. Datos desde geojson
+5. Puntos al mapa
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2020, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
 2. Django Project, Django, Miércoles 22 Abril 2020, GEOSGeometry, https://docs.djangoproject.com/en/3.0/ref/contrib/gis/geos/#what-is-geos
