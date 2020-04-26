@@ -1304,7 +1304,9 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 ```  
 Nuestro mapa deberá verse de la siguiente forma:  
 
-
+<p align="center"> 
+<img src="../img/mapa_02_inicial.png">
+</p>  
 
 
 # Referencias
