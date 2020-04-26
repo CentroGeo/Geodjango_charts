@@ -1358,7 +1358,25 @@ Agregaremos unos pocos datos al mapa:
 	
 4. Datos desde geojson  
 	Éste es un punto interesante, leaflet nos permite cargar geojson directamente, para ello primero vamos a bajar los datos  
-	del siguiente link: **https://datos.cdmx.gob.mx/explore/dataset/alcaldias/table/** 
+	del siguiente link: **https://datos.cdmx.gob.mx/explore/dataset/alcaldias/table/**  
+	
+	<p align="center"> 
+	<img src="../img/geojson_mapa02_ini.png">
+	</p>  
+	
+	Filtramos por delegación **Tlalpan** 
+	
+	<p align="center"> 
+	<img src="../img/circulo_mapa02.png">
+	</p>  
+	
+	Exportamos los datos a **geojson**  
+	
+	<p align="center"> 
+	<img src="../img/geojson_mapa02_ini.png">
+	</p>  
+	Ahora solo copiaremos a la carpeta media el archivo geojson generado  
+	
 5. Puntos al mapa
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2020, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
