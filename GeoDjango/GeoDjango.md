@@ -1171,7 +1171,7 @@ class AddPointForm(forms.Form):
 <img src="../img/Punto-imagen.png">
 </p> 
 
-## Breve introducción a la terminal shell para operaciones espaciales
+## Breve introducción a la terminal shell 
 
 ### GEOSGeometry  
 **¿Qué es GEOSGeometry?** Es una biblioteca de código abierto que implementa las funcionalidades de OpenGIS para el manejo de predicados espaciales **SQL** y operadores espaciales.  
@@ -1220,7 +1220,32 @@ En el ejemplo estamos imprimiendo la coordenada por cada coordenada en el LineSt
 <img src="../img/srid-dinamico.png">
 </p>  
 
-De igual forma podemos asignar como en la imagen el srid de forma dinámica, ésto nos puede servir para asignar posteriormente el sistema de referencia.
+De igual forma podemos asignar como en la imagen el srid de forma dinámica, ésto nos puede servir para asignar posteriormente el sistema de referencia.  
+
+
+## Agregando datos desde mapa leaflet
+
+Como última sección del curso, veremos brevemente cómo cargar un mapa leaflet y meterle distintos tipos de geometrías desde JavaScript. 
+
+Primero vamos a crear nuestra vista basada en clase **Mapa02** para ello abriremos nuestro archivo **primeraVista/views.py** y agregaremos la siguiente clase:
+```python  
+#código previo  
+class Mapa02(View):
+    def get(self, request):      
+        return render(request, 'primeraVista/mapa_02.html')
+```  
+
+Una vez agregado, nos vamos a **urls.py** y agregaremos la ruta (**path**) con lo que nuestro **urlpatterns** queda:
+
+```python
+urlpatterns = [
+    path('',index),
+    path('data/', data),
+	path("puntos/crear-punto/", views.AgregarPuntos.as_view(), name="crear_punto"),
+	path("mapa2/", views.Mapa02.as_view(), name="mapa_02"),
+]
+```
+Con ésto ya solo nos queda crear nuestro template para el nuevo mapa pero antes debemos cambiar algunas cosas en nuestro archivo **home.html**
 
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2020, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
