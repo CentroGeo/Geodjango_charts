@@ -1323,8 +1323,39 @@ Agregaremos unos pocos datos al mapa:
 	<p align="center"> 
 	<img src="../img/mapa_02_inicial.png">
 	</p>
-2. Un círculo
-3. Un polígono
+2. Un círculo  
+	Agregamos lo siguiente al código:  
+	```javascript  
+	//Código previo
+	L.circle([19.36, -99.14], 500, {
+		color: 'red',
+		fillColor: '#f03',
+		fillOpacity: 0.5
+	}).addTo(map2).bindPopup("<b>Click sobre el círculo</b>");
+	```     
+	Aquí estamos indicando la opacidad, el color del círculo y del relleno del mismo. Deberíamos poder visualizarlo de la  
+	siguiente forma: 
+	
+	<p align="center"> 
+	<img src="../img/circulo_mapa02.png">
+	</p>
+	
+	
+3. Un polígono  
+	Agregamos lo siguiente al código:  
+	```javascript  
+	//Código previo
+	var polygon = L.polygon([
+	    [19.39, -99.14],
+	    [19.41, -99.15],
+	    [19.41, -99.13]
+	]).addTo(map2).bindPopup("<b>Click sobre el polígono</b>");
+	```   
+	Aquí indicamos cada una de las esquinas que conforman el polígono obteniendo el siguiente resultado:  
+	 <p align="center"> 
+	<img src="../img/poligono_mapa02.png">
+	</p>
+	
 4. Datos desde geojson
 5. Puntos al mapa
 # Referencias
