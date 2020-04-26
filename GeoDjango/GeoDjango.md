@@ -1275,6 +1275,20 @@ Para extender un archivo usaremos el tag sombreado, ahí indicamos el template q
 
 ```
 Omitiremos la explicación de la estructura html puesto que ya cubrimos esa parte previamente y nos enfocaremos al archivo **JS**.
+Creamos nuestro archivo **JS**  **mapa02.js** y  ya no usaremos  **$(document).ready(function()...** de Jquery, simplemente definiremos nuestro mapa de la siguiente forma:  
+
+```javascript
+map2 = new L.Map('mapid', {
+        center: new L.LatLng(19.27, -99),
+        zoomControl: true,
+        minZoom: 11,
+        maxZoom:20,
+        layers: []
+      }).setView([19.40, -99.14], 11);
+```  
+
+Aquí solo estamos dándole la configuración inicial, lo centramos en la **CDMX**, le damos un zoom máximo y mínimo, le damos la capacidad de controlar el zoom, no le damos capas y centramos la vista. Ésto lo habíamos hecho previamente, ahora agreguemos una capa con un tile personalizado **crétidos a maxbox por el tile** **https://www.mapbox.com/?utm_medium=sem&utm_source=google&utm_campaign=sem|google|brand|chko-googlesearch-pr01-mapboxbrand-br.exact-intl-landingpage-search&utm_term=brand&utm_content=chko-googlesearch-pr01-mapboxbrand-br.exact-intl-landingpage-search&gclid=EAIaIQobChMIi_CetKGF6QIVg__jBx0uvgkoEAAYASAAEgIMH_D_BwE** 
+
 
 
 # Referencias
