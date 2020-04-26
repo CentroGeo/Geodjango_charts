@@ -1320,6 +1320,9 @@ Agregaremos unos pocos datos al mapa:
 	Aquí estamos añadiendo un marcador con sus respectivas **Lat**, **Long**, un popUp con contenido html y
 	a través de la función openPopup() indicamos que se abra en el mapa en cuando se agregue obteniendo lo siguiente:  
 	
+	<p align="center"> 
+	<img src="../img/mapa_02_inicial.png">
+	</p>
 2. Un círculo
 3. Un polígono
 4. Datos desde geojson
