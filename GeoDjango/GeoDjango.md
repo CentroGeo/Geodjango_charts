@@ -1245,7 +1245,21 @@ urlpatterns = [
 	path("mapa2/", views.Mapa02.as_view(), name="mapa_02"),
 ]
 ```
-Con ésto ya solo nos queda crear nuestro template para el nuevo mapa pero antes debemos cambiar algunas cosas en nuestro archivo **home.html**
+Con ésto ya solo nos queda crear nuestro template para el nuevo mapa pero antes debemos cambiar algunas cosas en nuestro archivo **home.html**  
+
+<p align="center"> 
+<img src="../img/block-content.png">
+</p>  
+
+Notemos que debemos agregar las líneas sombreadas, ésto es algo que nos proporciona django para "agrupar" contenidos dentro de nuestro html, en éste caso estamos indicando que lo que está dentro de **body_content** sobreescribirá el body dentro de otros archivos html, es una forma de evitar estar definiendo mismo código en distintos templates, una vez agregada esa línea podemos pasar a nuestro template **mapa_02.html**.  
+
+
+<p align="center"> 
+<img src="../img/block-content.png">
+</p>  
+
+Para extender un archivo usaremos el tag sombreado, ahí indicamos el template que queremos extender y por consiguiente se nos cargarán todos los imports del **home** cuando hagamos ésto debemos tener cuidado de la redundancia y que probablemente extendamos algún archivo que tal vez ya no nos interese, sin embargo de momento omiteremos esos detalles.  
+
 
 # Referencias
 1.  Mozilla, Mozilla org, Lunes 17 Febrero 2020, HTTP, https://developer.mozilla.org/es/docs/Web/HTTP. 
