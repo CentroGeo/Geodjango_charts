@@ -5,6 +5,8 @@ Introduciremos el concepto de ORM (Object Relational Mapping) Objecto Modelo Rel
 </p> 
 
 ### Cómo definir modelos en  python ###
+Existen dos formas de hacerlo un mapeo automático de tablas existentes en la base de datos o definir explicitamente nuestros modelos, para éste tema haremos ésto último. 
+
 
 Debemos irnos al archivo **models.py** dentro de app y veremos lo siguiente:  
 <p align="center"> 
@@ -35,7 +37,8 @@ class Datos(models.Model):
     identidad = models.CharField(max_length = 100)	
 ```  
 Como podremos observar nuestra variable id de tipo entero será nuestra llave en la tabla, posteriormente lo más importante a notar es la variable geom la cual funge como la representación de la geometría en nuestro caso es de tipo punto aunque podríamos tener otras como poligono o línea. Es **recomendable** más no obligatorio que se defina el modelo para cada app en su propio models.py
-Aunque resulte un poco obvio que IntegerField() y CharField() sean para campos de tipo entero y cadena respectivamente, no está de más leer o tener a la mano la documentación que se dejará en la parte de abajo, **https://docs.djangoproject.com/en/3.0/topics/db/models/**.  
+Aunque resulte un poco obvio que IntegerField() y CharField() sean para campos de tipo entero y cadena respectivamente, no está de más leer o tener a la mano la documentación que se dejará en la parte de abajo.  
+
 Dejaremos pendientes la parte de las relaciones entre tablas para más adelante, de momento no son necesarias.
 
 1. [Documentación Django GIS Models][https://docs.djangoproject.com/en/3.0/ref/contrib/gis/model-api/]
