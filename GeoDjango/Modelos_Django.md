@@ -6,7 +6,7 @@ Introduciremos el concepto de ORM (Object Relational Mapping) Objecto Modelo Rel
 
 ### Cómo definir modelos en  python ###
 
-Debemos irnos al archivo models.py dentro de app y veremos lo siguiente:  
+Debemos irnos al archivo **models.py** dentro de app y veremos lo siguiente:  
 <p align="center"> 
 <img src="../img/prev_models.png">
 </p>   
