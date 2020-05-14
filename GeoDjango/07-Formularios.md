@@ -296,7 +296,7 @@ class AddPointForm(forms.Form):
 2. [Documentación Django Forms][https://docs.djangoproject.com/en/3.0/topics/forms/]  
 3. [Ejemplo Django Form ][https://tutorial.djangogirls.org/en/django_forms/]  
 4. [Video ejemplo Django Form ][https://www.youtube.com/watch?v=6oOHlcHkX2U]  
-4. [Video ejemplo Django Form ][https://www.youtube.com/watch?v=B3oQIx1W8PA]  
+5. [Video ejemplo Django Form ][https://www.youtube.com/watch?v=B3oQIx1W8PA]  
 
 
 
