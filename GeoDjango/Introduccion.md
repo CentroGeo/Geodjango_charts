@@ -23,7 +23,8 @@ Para descargar Anaconda en windows simplemente debemos ir al siguiente link  **h
 <img src="../img/Anaconda01.png">
 </p>  
 
-Debemos dar en el botón de download y nos pedirá seleccionar la versión que queramos descargar, en nuestro caso bajaremos la versión de 64 bits con el instalador gráfico  
+Debemos dar en el botón de download y nos pedirá seleccionar la versión que queramos descargar, en nuestro caso bajaremos la versión de 64 bits con el instalador gráfico   
+Abrimos el ejecutable .exe que nos descarga y veremos la siguiente pantalla: 
 
 <p align="center"> 
 <img src="../img/Anaconda02.png">
@@ -36,16 +37,30 @@ Debemos dar en el botón de download y nos pedirá seleccionar la versión que q
 </p>  
 <p align="center"> 
 <img src="../img/Anaconda05.png">
-</p>  
+</p> 
 <p align="center"> 
 <img src="../img/Anaconda06.png">
-</p>  
+</p> 
+Indicamos la ruta de instalación, recomiendo dejarla tal cual la ponga si no estás familiarizado con las rutas.  
+
 <p align="center"> 
 <img src="../img/Anaconda07.png">
 </p>  
+Aquí debemos seleccionar las dos casillas, la primera lo que hace es agregar una variable de entorno para Anaconda en nuestro sistema operativo, ésto le indica al sistema operativo que independientemente de dónde estemos parados en la terminal podamos **"invocar"** a anaconda.  
+Por otro lado, la otra casilla indica que le otorgamos que detecte el python de Anaconda por defecto al sistema operativo, tanto a herramientas como Visual Studio o similar, si no queremos que se use la versión de anaconda por defecto, entonces no debemos marcar esa casilla.  
 
+<p align="center"> 
+<img src="../img/Anaconda09.png">
+</p>  
+<p align="center"> 
+<img src="../img/Anaconda10.png">
+</p>  
+<p align="center"> 
+<img src="../img/Anaconda11.png">
+</p>
 
-Abrimos el ejecutable .exe que nos descarga y veremos la siguiente pantalla: 
+Ahora tenemos instalado anaconda en nuestro sistema operativo
+
 ## Activación del proyecto ##  
 **conda activate entorno**  
 ## Creación de proyecto ## 
