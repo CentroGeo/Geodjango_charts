@@ -89,6 +89,4 @@ cuya instalación en Windows se cubre en el curso básico de Python previamente 
 Donde **nombre_de_entorno** corresponde al nombre con el que hayamos querido nombrar a nuestro entorno.   
 
 
-<h3 align="center">   
 [Creacion del proyecto](https://centrogeo.github.io/Geodjango_charts/GeoDjango/02-Creacion_proyecto.html)  
-</h3>   
