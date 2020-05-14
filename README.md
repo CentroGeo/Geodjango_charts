@@ -11,6 +11,6 @@ Prerequisitos:
 **PgAdmin 4  https://www.pgadmin.org/download/**  
 
 ## Autores ##
-Navarrete Puebla Alexis 
+Navarrete Puebla Alexis   
 Rosado Cabrera Diego  
 Karime González Zuccolotto  
