@@ -11,6 +11,12 @@ Abrimos la página de anaconda.org donde veremos lo siguiente:
 <img src="../img/Django-install01.png">
 </p>
 
+En nuestra terminal debemos hacerlo de la siguiente forma:  
+
+<p align="center"> 
+<img src="../img/Django-install02.png">
+</p>  
+
 **django-admin startproject prueba**  
 
 <p align="center"> 
@@ -31,7 +37,8 @@ De ésta forma tendremos iniciado nuestro proyecto, ahora deberemos crear nuestr
 **python manage.py startapp app**  
 Así habremos creado nuestra primera app, entremos a la carpeta y crearemos una carpeta dentro llamada vistaPrincipal y moveremos todos los archivos dentro de app a ella.  
 La estructura debería quedar de la siguiente forma:  
-.  
+
+
 
 ```
 Geodjango_charts/
