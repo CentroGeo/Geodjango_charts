@@ -67,7 +67,7 @@ Ahora tenemos instalado anaconda en nuestro sistema operativo.
 **Una vez abierta la terminal** debemos escribir el comando:  
 <p align="center"> 
  
-**conda create -n incidentes python=3.7** 	 
+**conda create -n nombre_de_entorno python=3.7** 	 
 </p> 
 
 <p align="center"> 
@@ -75,15 +75,10 @@ Ahora tenemos instalado anaconda en nuestro sistema operativo.
 </p>  
 
 Debemos escribir la opción **y** para crear el entorno y empezará a instalar las dependencias básicas del entorno.
-## Activación del proyecto ##  
+## Activación del entorno ##  
 Para activar nuestro entorno de django es necesario abrir una terminal ya sea **cmd** de Windows o algún emulador de terminal Linux como **cmder** **https://cmder.net/** cuya instalación en Windows se cubre en el curso básico de Python previamente mencionado.  
 
-**conda activate entorno**  
+**conda activate nombre_de_entorno**  
 
+Donde **nombre_de_entorno** corresponde al nombre con el que hayamos querido nombrar a nuestro entorno.
 
-## Creación de proyecto ## 
-**django-admin startproject prueba**  
-
-<p align="center"> 
-<img src="../img/01.png">
-</p> 
