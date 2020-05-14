@@ -40,13 +40,13 @@ Como podremos observar nuestra variable id de tipo entero será nuestra llave en
 Es **recomendable** más no obligatorio que se defina el modelo para cada app en su propio models.py
 Aunque resulte un poco obvio que **IntegerField()** y **CharField()** sean para campos de tipo entero y cadena respectivamente como su nombre lo indica, no está de más leer o tener a la mano la documentación que se dejará en la parte de abajo.  
 
-Dejaremos pendientes la parte de las relaciones entre tablas para más adelante, de momento no son necesarias.  
+Dejaremos pendientes la parte de las relaciones entre tablas para más adelante, de momento no son necesarias.   
 
 
-1. [Documentación Django GIS Models][https://docs.djangoproject.com/en/3.0/ref/contrib/gis/model-api.html]  
-2. [Documentación Django  Models][https://docs.djangoproject.com/en/3.0/topics/db/models.html]  
-3. [Ejemplo Django GIS Models][https://youtu.be/jQlvPAiSCjk?t=994.html]  
-4. [Ejemplo Django  Models][https://www.youtube.com/watch?v=HDz6lqZ91rE.html]  
+1. [Documentación Django GIS Models](https://docs.djangoproject.com/en/3.0/ref/contrib/gis/model-api.html)  
+2. [Documentación Django  Models](https://docs.djangoproject.com/en/3.0/topics/db/models.html)  
+3. [Ejemplo Django GIS Models](https://youtu.be/jQlvPAiSCjk?t=994.html)  
+4. [Ejemplo Django  Models](https://www.youtube.com/watch?v=HDz6lqZ91rE.html)    
   
 [Configuración BDD](https://centrogeo.github.io/Geodjango_charts/GeoDjango/03.5-Base-De-Datos.html)
 
