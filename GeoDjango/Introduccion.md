@@ -13,7 +13,7 @@ Además, aunque se cubra un poco, se puede encontrar un tutorial básico de Java
 **conda activate entorno**  
 ## Creación de proyecto ## 
 **django-admin startproject prueba**  
-.  
+
 <p align="center"> 
 <img src="../img/01.png">
 </p> 
