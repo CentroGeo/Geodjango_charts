@@ -291,3 +291,4 @@ class AddPointForm(forms.Form):
 <p align="center"> 
 <img src="../img/Punto-imagen.png">
 </p> 
+https://docs.djangoproject.com/en/3.0/ref/contrib/gis/forms-api/
