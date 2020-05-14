@@ -1,4 +1,4 @@
-## ¿Qué son los modelos django ##
+## ¿Qué son los modelos django? ##
 Introduciremos el concepto de ORM (Object Relational Mapping) Objecto Modelo Relación en español, es un patrón de diseño que nos permite manejar las tablas de la base de datos como clases en el lenguaje, en nuestro caso Python, django internamente maneja un mapeo entre nuestras tablas en la base de datos y clases en python, es importante que la manupulación hacia las tablas de la base de datos es mejor hacerlo através del ORM que con ejecución de querys directamente a la base de datos por temas de seguridad.
 <p align="center"> 
 <img src="../img/Django-Models.png">
