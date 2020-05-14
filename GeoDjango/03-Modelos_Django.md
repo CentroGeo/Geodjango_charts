@@ -43,10 +43,10 @@ Aunque resulte un poco obvio que **IntegerField()** y **CharField()** sean para 
 Dejaremos pendientes la parte de las relaciones entre tablas para más adelante, de momento no son necesarias.  
 
 
-1. [Documentación Django GIS Models][https://docs.djangoproject.com/en/3.0/ref/contrib/gis/model-api/]  
-2. [Documentación Django  Models][https://docs.djangoproject.com/en/3.0/topics/db/models/]  
-3. [Ejemplo Django GIS Models][https://youtu.be/jQlvPAiSCjk?t=994]  
-4. [Ejemplo Django  Models][https://www.youtube.com/watch?v=HDz6lqZ91rE]  
+1. [Documentación Django GIS Models][https://docs.djangoproject.com/en/3.0/ref/contrib/gis/model-api.html]  
+2. [Documentación Django  Models][https://docs.djangoproject.com/en/3.0/topics/db/models.html]  
+3. [Ejemplo Django GIS Models][https://youtu.be/jQlvPAiSCjk?t=994.html]  
+4. [Ejemplo Django  Models][https://www.youtube.com/watch?v=HDz6lqZ91rE.html]  
   
 [Configuración BDD](https://centrogeo.github.io/Geodjango_charts/GeoDjango/03.5-Base-De-Datos.html)
 
