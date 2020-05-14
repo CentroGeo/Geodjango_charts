@@ -17,7 +17,7 @@ Además, aunque se cubra un poco, se puede encontrar un tutorial básico de Java
 **¿Qué es Anaconda?**   
 Bueno pues Anaconda es una herramienta desarrollada por **Anaconda, Inc.** para Python y R que nos provee de bibliotecas, aplicaciones y herramientas muy útiles en el campo de la Ciencias de Datos sienod éste de código abierto.
 
-Para descargar Anaconda en windows simplemente debemos ir al siguiente link  **https://www.anaconda.com/products/individual.html** donde se nos proporciona la edición individual libre de Anaconda. 
+Para descargar Anaconda en windows simplemente debemos ir al siguiente link  **https://www.anaconda.com/products/individual** donde se nos proporciona la edición individual libre de Anaconda. 
 
 <p align="center"> 
 <img src="../img/Anaconda01.png">
@@ -77,7 +77,7 @@ Ahora tenemos instalado anaconda en nuestro sistema operativo.
 
 Debemos escribir la opción **y** para crear el entorno y empezará a instalar las dependencias básicas del entorno.
 ## Activación del entorno ##  
-Para activar nuestro entorno de django es necesario abrir una terminal ya sea **cmd** de Windows o algún emulador de terminal Linux como **cmder** **https://cmder.net.html** cuya instalación en Windows se cubre en el curso básico de Python previamente mencionado.   
+Para activar nuestro entorno de django es necesario abrir una terminal ya sea **cmd** de Windows o algún emulador de terminal Linux como **cmder** **https://cmder.net/** cuya instalación en Windows se cubre en el curso básico de Python previamente mencionado.   
 
 
 **conda activate nombre_de_entorno**  
