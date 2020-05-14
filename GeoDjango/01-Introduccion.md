@@ -80,7 +80,8 @@ Para activar nuestro entorno de django es necesario abrir una terminal ya sea **
 
 **conda activate nombre_de_entorno**  
 
-Donde **nombre_de_entorno** corresponde al nombre con el que hayamos querido nombrar a nuestro entorno.
+Donde **nombre_de_entorno** corresponde al nombre con el que hayamos querido nombrar a nuestro entorno.  
+
 <h3 align="center"> 
-[Creación de proyecto](https://centrogeo.github.io/Geodjango_charts/GeoDjango/02-Creacion_proyecto.md)
+[creacion](https://centrogeo.github.io/Geodjango_charts/GeoDjango/02-Creacion_proyecto.md)
 </h3>
