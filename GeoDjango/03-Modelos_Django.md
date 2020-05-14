@@ -28,7 +28,6 @@ from django.contrib.gis.db import models as geomodels
 class Datos(models.Model):
     id = models.IntegerField(primary_key=True)    	
     geom = geomodels.MultiPointField()
-    field_1	= models.IntegerField()
     id_ssc	= models.IntegerField()
     id_pgj = models.IntegerField()
     delito = models.CharField(max_length = 100)
