@@ -48,6 +48,7 @@ En el ejemplo estamos imprimiendo la coordenada por cada coordenada en el LineSt
 </p>  
 
 De igual forma podemos asignar como en la imagen el srid de forma dinámica, ésto nos puede servir para asignar posteriormente el sistema de referencia. 
+
 1. [Documentación shell][https://docs.djangoproject.com/en/3.0/ref/contrib/gis/tutorial/]    
 
 [Agregar datos leaflet](https://centrogeo.github.io/Geodjango_charts/GeoDjango/09-Datos-Leaflet.html)
