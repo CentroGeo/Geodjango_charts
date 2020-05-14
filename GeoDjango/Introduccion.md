@@ -40,12 +40,14 @@ Abrimos el ejecutable .exe que nos descarga y veremos la siguiente pantalla:
 </p> 
 <p align="center"> 
 <img src="../img/Anaconda06.png">
-</p> 
+</p>
+
 Indicamos la ruta de instalación, recomiendo dejarla tal cual la ponga si no estás familiarizado con las rutas.  
 
 <p align="center"> 
 <img src="../img/Anaconda07.png">
 </p>  
+
 Aquí debemos seleccionar las dos casillas, la primera lo que hace es agregar una variable de entorno para Anaconda en nuestro sistema operativo, ésto le indica al sistema operativo que independientemente de dónde estemos parados en la terminal podamos **"invocar"** a anaconda.  
 Por otro lado, la otra casilla indica que le otorgamos que detecte el python de Anaconda por defecto al sistema operativo, tanto a herramientas como Visual Studio o similar, si no queremos que se use la versión de anaconda por defecto, entonces no debemos marcar esa casilla.  
 
@@ -55,9 +57,7 @@ Por otro lado, la otra casilla indica que le otorgamos que detecte el python de 
 <p align="center"> 
 <img src="../img/Anaconda10.png">
 </p>  
-<p align="center"> 
-<img src="../img/Anaconda11.png">
-</p>
+
 
 Ahora tenemos instalado anaconda en nuestro sistema operativo
 
