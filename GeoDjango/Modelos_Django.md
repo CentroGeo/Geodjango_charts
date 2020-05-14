@@ -3,6 +3,7 @@ Introduciremos el concepto de ORM (Object Relational Mapping) Objecto Modelo Rel
 <p align="center"> 
 <img src="../img/Django-Models.png">
 </p> 
+
 ### Cómo definir modelos en  python ###
 
 Debemos irnos al archivo models.py dentro de app y veremos lo siguiente:  
