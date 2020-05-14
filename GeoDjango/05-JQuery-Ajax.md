@@ -25,7 +25,7 @@ La variable testData es un objeto el cual tiene un atributo data de tipo array q
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       });
 ```  
-Donde zoom es una opción que le podemos cambiar al métodod TileLayer de leaflet **puede consultar el siguiente link para más información** **https://leafletjs.com/reference-1.6.0.html#tilelayer**, TileLayer por su parte nos permita para cargar y mostrar capas en nuestro mapa, el primero parámetro del método corresponde al template del mapa (los cuales puede cambiar a consideración dependiendo el uso) se pueden encontrar algunos en el siguiente link **https://wiki.openstreetmap.org/wiki/Tile_servers**, el siguiente parámetro es un objeto con opciones para nuestro mapa, puede consultar las opciones aquí o puede dirigirse a link que se puso previamente, de momento nos quedaremos solo con zoom y attribution para dar crédito a OpenStreetMaps
+Donde zoom es una opción que le podemos cambiar al métodod TileLayer de leaflet (más opciones de configuración pueden ser consultadas en las referencias al final del documento), TileLayer por su parte nos permita para cargar y mostrar capas en nuestro mapa, el primero parámetro del método corresponde al template del mapa (los cuales puede cambiar a consideración dependiendo el uso, el siguiente parámetro es un objeto con opciones para nuestro mapa, puede consultar las opciones aquí o puede dirigirse a link que se puso previamente, de momento nos quedaremos solo con zoom y attribution para dar crédito a OpenStreetMaps
 
 <p align="center"> 
 <img src="../img/tilelayetoptions.png">
@@ -81,7 +81,7 @@ map1 = new L.Map('map1', {
       }).setView([19.40, -99.14], 11);
 ```
 
-Donde el campo **zoomControl** recibe un valor booleano para indicar si se puede acercar o alejar el zoom con la rueda del ratón, **minZoom** es el mínimo zoom que puede tener el mapa y **maxZoom** es el máximo zoom que puede tener, **layers** es probablemente el campo de configuración más importante porque aquí le indicamos las capas que debe tener nuestro mapa, por lo que debe incluir la capa con los datos para el mapa de calor y el mapa base, existen otras opciones que podemos incluir en nuestro mapa las cuales se pueden consultar en el siguiente link https://leafletjs.com/reference-1.6.0.html#map-option  
+Donde el campo **zoomControl** recibe un valor booleano para indicar si se puede acercar o alejar el zoom con la rueda del ratón, **minZoom** es el mínimo zoom que puede tener el mapa y **maxZoom** es el máximo zoom que puede tener, **layers** es probablemente el campo de configuración más importante porque aquí le indicamos las capas que debe tener nuestro mapa, por lo que debe incluir la capa con los datos para el mapa de calor y el mapa base, existen otras opciones que podemos incluir en nuestro mapa las cuales se pueden consultar hasta abajo en las referencias.
 
 Nuestra página debería verse de la siguiente forma:    
 <p align="center"> 
@@ -291,5 +291,8 @@ Ahora debemos tener lo siguiente en nuestro mapa:
 </p>
 
 **Información auxiliar**
-1. [Documentación Django GIS Models][https://docs.djangoproject.com/en/3.0/ref/contrib/gis/model-api/]
-2. [Documentación Django  Models][https://docs.djangoproject.com/en/3.0/topics/db/models/]
+
+1. [Framework JQuery][https://jquery.com/]
+2. [Serializer Django][https://docs.djangoproject.com/en/3.0/ref/contrib/gis/serializers/]
+3. [Documentación Leaflet][  https://leafletjs.com/reference-1.6.0.html#tilelayer]
+3. [Leaflet tiles][ https://wiki.openstreetmap.org/wiki/Tile_servers/]
