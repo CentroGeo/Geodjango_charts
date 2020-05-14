@@ -180,5 +180,5 @@ Con ésto obtendriamos lo siguiente en nuestra página:
 3. [Video Django ChartJS][https://www.youtube.com/watch?v=B4Vmm3yZPgc]  
 4. [Charts JS desde python][https://pypi.org/project/django-chartjs/]  
 
-[JQuery & Ajax](https://centrogeo.github.io/Geodjango_charts/GeoDjango/06-Charts.html)
+[Charts JS](https://centrogeo.github.io/Geodjango_charts/GeoDjango/06-Charts.html)
 
