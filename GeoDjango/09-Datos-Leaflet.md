@@ -209,9 +209,9 @@ Agregaremos unos pocos datos al mapa:
 	la base de datos para guardarlos a través de ajax, guardarlo en un formulario y enviarlo por **post** .   
 	Realmente su uso es muy escalable.
 
+**Información adicional**  
 
-
-1. [Tutorial básico leaflet][https://leafletjs.com/examples/quick-start/]    
-2. [Ejemplo leaflet][https://www.wrld3d.com/wrld.js/latest/docs/examples/adding-a-leaflet-polygon/]  
-3. [Video ejemplo leaflet][https://www.youtube.com/watch?v=OYjFR_CGV8o]   
+1. [Tutorial básico leaflet][https://leafletjs.com/examples/quick-start/]      
+2. [Ejemplo leaflet][https://www.wrld3d.com/wrld.js/latest/docs/examples/adding-a-leaflet-polygon/]   
+3. [Video ejemplo leaflet][https://www.youtube.com/watch?v=OYjFR_CGV8o]    
  
