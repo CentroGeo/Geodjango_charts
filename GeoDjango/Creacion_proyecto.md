@@ -20,7 +20,7 @@ Por último si todo salio correctamente deberá verse de la siguiente forma
 
 
 <p align="center"> 
-<img src="../img/Django-install02.png">
+<img src="../img/Django-install03.png">
 </p>  
 
 Ahora, con ésto podemos proceder a crear nuestro proyecto de Django para ello nos paramos en una carpeta donde queramos guardar el proyecto en la terminal y ejecutamos el comando:  
