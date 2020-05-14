@@ -291,4 +291,12 @@ class AddPointForm(forms.Form):
 <p align="center"> 
 <img src="../img/Punto-imagen.png">
 </p> 
-https://docs.djangoproject.com/en/3.0/ref/contrib/gis/forms-api/
+
+1. [Documentación GeoDjango Forms][https://docs.djangoproject.com/en/3.0/ref/contrib/gis/forms-api/]    
+2. [Documentación Django Forms][https://docs.djangoproject.com/en/3.0/topics/forms/]  
+3. [Ejemplo Django Form ][https://tutorial.djangogirls.org/en/django_forms/]  
+4. [Video ejemplo Django Form ][https://www.youtube.com/watch?v=6oOHlcHkX2U]  
+4. [Video ejemplo Django Form ][https://www.youtube.com/watch?v=B3oQIx1W8PA]  
+
+
+
