@@ -117,5 +117,5 @@ Con ésto tenemos la configuración básica de nuestra aplicación hecha, aunque
 Antes de continuar es importante mencionar el concepto de **json y geojson**  
 **Json** por sus siglas JavaScript Object Notation (notación de objetos javascritp) y siendo **Geojson** un tipo de json particular para datos espaciales, para más información consultar **https://www.json.org/json-es.html**  
 
-[creacion del proyecto](https://centrogeo.github.io/Geodjango_charts/GeoDjango/02-Creacion_proyecto.md)
+[creacion del proyecto](https://centrogeo.github.io/Geodjango_charts/GeoDjango/03-Modelos_Django.md)
 
