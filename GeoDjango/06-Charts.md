@@ -1,3 +1,4 @@
+## Gráficas con Chart.js ## 
 Notemos que en nuestro html tenemos  
 
 ```html
