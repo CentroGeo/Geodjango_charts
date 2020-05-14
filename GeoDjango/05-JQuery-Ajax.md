@@ -290,12 +290,12 @@ Ahora debemos tener lo siguiente en nuestro mapa:
 <img src="../img/mapa01.png">
 </p>
 
-**Información auxiliar**
+**Información auxiliar**  
 
-1. [Framework JQuery][https://jquery.com/]
-2. [Serializer Django][https://docs.djangoproject.com/en/3.0/ref/contrib/gis/serializers/]
-3. [Documentación Leaflet][  https://leafletjs.com/reference-1.6.0.html#tilelayer]
-4. [Leaflet tiles][ https://wiki.openstreetmap.org/wiki/Tile_servers/]
-5. [Documentación Leaflet Django][ https://django-leaflet.readthedocs.io/en/latest/templates.html#use-leaflet-api]
+1. [Framework JQuery][https://jquery.com/]  
+2. [Serializer Django][https://docs.djangoproject.com/en/3.0/ref/contrib/gis/serializers/]  
+3. [Documentación Leaflet][  https://leafletjs.com/reference-1.6.0.html#tilelayer]  
+4. [Leaflet tiles][ https://wiki.openstreetmap.org/wiki/Tile_servers/]  
+5. [Documentación Leaflet Django][ https://django-leaflet.readthedocs.io/en/latest/templates.html#use-leaflet-api]  
 
 [Chart JS](https://centrogeo.github.io/Geodjango_charts/GeoDjango/06-Charts.html)
