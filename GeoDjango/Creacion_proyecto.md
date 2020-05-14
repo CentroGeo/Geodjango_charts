@@ -1,4 +1,16 @@
 ## Creación de proyecto ## 
+Una vez que hemos creado y activado nuestro entorno, enseñaremos a instalar django.  
+Debemos abrir google en el navegador y escribir lo de la imagen en el buscador:  
+
+<p align="center"> 
+<img src="../img/django-install01.png">
+</p>   
+Abrimos la página de anaconda.org donde veremos lo siguiente: 
+
+<p align="center"> 
+<img src="../img/01.png">
+</p> 
+
 **django-admin startproject prueba**  
 
 <p align="center"> 
