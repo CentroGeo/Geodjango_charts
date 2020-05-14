@@ -64,7 +64,9 @@ map2 = new L.Map('mapid', {
 
 Aquí solo estamos dándole la configuración inicial, lo centramos en la **CDMX**, le damos un zoom máximo y mínimo, le damos la capacidad de controlar el zoom, no le damos capas y centramos la vista. Ésto lo habíamos hecho previamente, ahora agreguemos una capa con un tile personalizado **crétidos a maxbox por el tile**   
 
-[mapbox] (https://www.mapbox.com/?utm_medium=sem&utm_source=google&utm_campaign=sem|google|brand|chko-googlesearch-pr01-mapboxbrand-br.exact-intl-landingpage-search&utm_term=brand&utm_content=chko-googlesearch-pr01-mapboxbrand-br.exact-intl-landingpage-search&gclid=EAIaIQobChMIi_CetKGF6QIVg__jBx0uvgkoEAAYASAAEgIMH_D_BwE)
+[MapBox](https://www.mapbox.com/?utm_medium=sem&utm_source=google&utm_campaign=sem|google|brand|chko-googlesearch-pr01-mapboxbrand-br.exact-intl-landingpage-search&utm_term=brand&utm_content=chko-googlesearch-pr01-mapboxbrand-br.exact-intl-landingpage-search&gclid=EAIaIQobChMIi_CetKGF6QIVg__jBx0uvgkoEAAYASAAEgIMH_D_BwE.html)
+
+
 
 
 ```javascript
