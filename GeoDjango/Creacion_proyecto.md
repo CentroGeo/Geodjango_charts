@@ -3,12 +3,12 @@ Una vez que hemos creado y activado nuestro entorno, enseñaremos a instalar dja
 Debemos abrir google en el navegador y escribir lo de la imagen en el buscador:  
 
 <p align="center"> 
-<img src="../img/django-install.png">
+<img src="../img/Django-install.png">
 </p>   
 Abrimos la página de anaconda.org donde veremos lo siguiente: 
 
 <p align="center"> 
-<img src="../img/django-install02.png">
+<img src="../img/Django-install01.png">
 </p>
 
 **django-admin startproject prueba**  
