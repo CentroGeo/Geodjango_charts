@@ -48,3 +48,4 @@ Dejaremos pendientes la parte de las relaciones entre tablas para más adelante,
 4. [Ejemplo Django  Models][https://www.youtube.com/watch?v=HDz6lqZ91rE]
 
 
+03.5-Base-De-Datos.md
