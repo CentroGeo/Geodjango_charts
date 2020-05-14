@@ -77,7 +77,7 @@ Abrimos el archivo settings.py y buscamos la sección de installed apps
 <img src="../img/installed_apps_prev.png">
 </p> 
 
-Dado que estaremos trabajando con datos espaciales, tendremos que usar la extensión espacial de **django** la cual se puede consultar en el siguiente link ** https://docs.djangoproject.com/en/3.0/ref/contrib/gis/ **  
+Dado que estaremos trabajando con datos espaciales, tendremos que usar la extensión espacial de **django** la cual se puede consultar en el siguiente link **https://docs.djangoproject.com/en/3.0/ref/contrib/gis/**  
 <p align="center"> 
 <img src="../img/installed_app_post.png">
 </p>
