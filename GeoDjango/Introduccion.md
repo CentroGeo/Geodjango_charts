@@ -28,6 +28,22 @@ Debemos dar en el botón de download y nos pedirá seleccionar la versión que q
 <p align="center"> 
 <img src="../img/Anaconda02.png">
 </p>  
+<p align="center"> 
+<img src="../img/Anaconda03.png">
+</p>  
+<p align="center"> 
+<img src="../img/Anaconda04.png">
+</p>  
+<p align="center"> 
+<img src="../img/Anaconda05.png">
+</p>  
+<p align="center"> 
+<img src="../img/Anaconda06.png">
+</p>  
+<p align="center"> 
+<img src="../img/Anaconda07.png">
+</p>  
+
 
 Abrimos el ejecutable .exe que nos descarga y veremos la siguiente pantalla: 
 ## Activación del proyecto ##  
