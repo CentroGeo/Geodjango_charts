@@ -59,10 +59,21 @@ Por otro lado, la otra casilla indica que le otorgamos que detecte el python de 
 </p>  
 
 
-Ahora tenemos instalado anaconda en nuestro sistema operativo
+Ahora tenemos instalado anaconda en nuestro sistema operativo.
+## Creación de entorno ##
+
+¿Qué es un entorno virtual? Es común que en situaciones de programación, en particular en python, conforme desarrollamos más y más programas nos enfrentemos a una situación donde tenemos tantas bibliotecas instaladas que entre ellas puedan causar algún tipo de conflicto, entonces dentro de lo que se conoce como **buenas prácticas de programación**, más en particular de python, existe algo llamado **entornos virtuales** que permiten separar las dependencias de cada proyecto hecho, es decir, no necesitamos tener instaladas todas las dependencias para un proyecto que tal vez no la requiera, la idea es tener solamente lo necesario para cada proyecto, entonces, en nuestro caso crearemos un entorno de **Anaconda** para nuestra versión de Python 3.7 que hasta éste punto del desarrollo del  tutorial es la versión por defecto que contiene. 
+
+**Una vez abierta la terminal** debemos escribir el comando:  
+<p align="center"> 
+ 
+</p> 
 
 ## Activación del proyecto ##  
+Para activar nuestro entorno de django es necesario abrir una terminal ya sea **cmd** de Windows o algún emulador de terminal Linux como **cmder** **https://cmder.net/** cuya instalación en Windows se cubre en el curso básico de Python previamente mencionado.
 **conda activate entorno**  
+
+
 ## Creación de proyecto ## 
 **django-admin startproject prueba**  
 
