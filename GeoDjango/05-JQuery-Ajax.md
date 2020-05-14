@@ -289,3 +289,7 @@ Ahora debemos tener lo siguiente en nuestro mapa:
 <p align="center"> 
 <img src="../img/mapa01.png">
 </p>
+
+**Información auxiliar**
+1. [Documentación Django GIS Models][https://docs.djangoproject.com/en/3.0/ref/contrib/gis/model-api/]
+2. [Documentación Django  Models][https://docs.djangoproject.com/en/3.0/topics/db/models/]
