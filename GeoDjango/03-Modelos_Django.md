@@ -47,5 +47,5 @@ Dejaremos pendientes la parte de las relaciones entre tablas para más adelante,
 3. [Ejemplo Django GIS Models][https://youtu.be/jQlvPAiSCjk?t=994]
 4. [Ejemplo Django  Models][https://www.youtube.com/watch?v=HDz6lqZ91rE]
 
+[Configuración BDD](https://centrogeo.github.io/Geodjango_charts/GeoDjango/03.5-Base-De-Datos.html)
 
-03.5-Base-De-Datos.md
