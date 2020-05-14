@@ -89,8 +89,8 @@ Ahora si podremos inicar nuestra aplicación para comprobar si todo va correctam
 </p>  
 
 
-1. [Video vistas][https://www.youtube.com/watch?v=e_aNUMCgqv0&list=PLpOqH6AE0tNgL7Jg9Kx4SdfA5_oK6292j&index=19.html]  
-2. [Documentación vistas django][https://tutorial.djangogirls.org/en/django_views.html]  
+1. [Video vistas](https://www.youtube.com/watch?v=e_aNUMCgqv0&list=PLpOqH6AE0tNgL7Jg9Kx4SdfA5_oK6292j&index=19)    
+2. [Documentación vistas django](https://tutorial.djangogirls.org/en/django_views)  
 
 
 
