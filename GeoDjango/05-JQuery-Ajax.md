@@ -295,4 +295,5 @@ Ahora debemos tener lo siguiente en nuestro mapa:
 1. [Framework JQuery][https://jquery.com/]
 2. [Serializer Django][https://docs.djangoproject.com/en/3.0/ref/contrib/gis/serializers/]
 3. [Documentación Leaflet][  https://leafletjs.com/reference-1.6.0.html#tilelayer]
-3. [Leaflet tiles][ https://wiki.openstreetmap.org/wiki/Tile_servers/]
+4. [Leaflet tiles][ https://wiki.openstreetmap.org/wiki/Tile_servers/]
+5. [Documentación Leaflet Django][ https://django-leaflet.readthedocs.io/en/latest/templates.html#use-leaflet-api]
