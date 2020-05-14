@@ -82,5 +82,5 @@ Para activar nuestro entorno de django es necesario abrir una terminal ya sea **
 
 Donde **nombre_de_entorno** corresponde al nombre con el que hayamos querido nombrar a nuestro entorno.
 <h1>
-[Curso](https://centrogeo.github.io/Geodjango_charts/GeoDjango/02-Introduccion.html)
+[Curso](https://centrogeo.github.io/Geodjango_charts/GeoDjango/02-Creacion_proyecto.md)
 </h1>  
