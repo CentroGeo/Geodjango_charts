@@ -77,7 +77,10 @@ Ahora tenemos instalado anaconda en nuestro sistema operativo.
 
 Debemos escribir la opción **y** para crear el entorno y empezará a instalar las dependencias básicas del entorno.
 ## Activación del entorno ##  
-Para activar nuestro entorno de django es necesario abrir una terminal ya sea **cmd** de Windows o algún emulador de terminal Linux como **cmder** **https://cmder.net/** cuya instalación en Windows se cubre en el curso básico de Python previamente mencionado.   
+Para activar nuestro entorno de django es necesario abrir una terminal ya sea **cmd** de Windows o algún emulador de terminal Linux como 
+**cmder**   
+**(https://cmder.net/)**   
+cuya instalación en Windows se cubre en el curso básico de Python previamente mencionado.   
 
 
 **conda activate nombre_de_entorno**  
@@ -85,4 +88,4 @@ Para activar nuestro entorno de django es necesario abrir una terminal ya sea **
 
 Donde **nombre_de_entorno** corresponde al nombre con el que hayamos querido nombrar a nuestro entorno.  
 
-[creacion del proyecto](https://centrogeo.github.io/Geodjango_charts/GeoDjango/02-Creacion_proyecto.html)
+[Creacion del proyecto](https://centrogeo.github.io/Geodjango_charts/GeoDjango/02-Creacion_proyecto.html)
