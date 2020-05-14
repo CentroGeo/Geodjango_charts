@@ -90,3 +90,7 @@ Ahora si podremos inicar nuestra aplicación para comprobar si todo va correctam
 
 1. [Video vistas basadas en funciones][https://www.youtube.com/watch?v=e_aNUMCgqv0&list=PLpOqH6AE0tNgL7Jg9Kx4SdfA5_oK6292j&index=19]
 2. [Documentación vistas django][https://tutorial.djangogirls.org/en/django_views/]
+
+
+[JQuery & Ajax](https://centrogeo.github.io/Geodjango_charts/GeoDjango/05-JQuery-Ajax.html)
+
