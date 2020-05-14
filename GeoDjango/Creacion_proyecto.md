@@ -6,7 +6,7 @@
 </p> 
 
 Se generará una carpeta con el nombres del proyecto y al abrirla encontraremos la siguiente estructura:  
-.  
+
 
 ```
 Geodjango_charts/
