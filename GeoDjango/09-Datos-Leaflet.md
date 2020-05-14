@@ -214,7 +214,7 @@ Agregaremos unos pocos datos al mapa:
 
 **Información adicional**  
 
-1. [Tutorial básico leaflet][https://leafletjs.com/examples/quick-start.html]      
-2. [Ejemplo leaflet][https://www.wrld3d.com/wrld.js/latest/docs/examples/adding-a-leaflet-polygon.html]   
-3. [Video ejemplo leaflet][https://www.youtube.com/watch?v=OYjFR_CGV8o.html]    
+1. [Tutorial básico leaflet](https://leafletjs.com/examples/quick-start/)      
+2. [Ejemplo leaflet](https://www.wrld3d.com/wrld.js/latest/docs/examples/adding-a-leaflet-polygon/)   
+3. [Video ejemplo leaflet](https://www.youtube.com/watch?v=OYjFR_CGV8o/)  
  
