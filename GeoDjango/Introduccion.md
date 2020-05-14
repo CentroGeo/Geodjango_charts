@@ -67,10 +67,13 @@ Ahora tenemos instalado anaconda en nuestro sistema operativo.
 **Una vez abierta la terminal** debemos escribir el comando:  
 <p align="center"> 
  
+**conda create -n incidentes python=3.7** 	 
 </p> 
 
+
 ## Activación del proyecto ##  
-Para activar nuestro entorno de django es necesario abrir una terminal ya sea **cmd** de Windows o algún emulador de terminal Linux como **cmder** **https://cmder.net/** cuya instalación en Windows se cubre en el curso básico de Python previamente mencionado.
+Para activar nuestro entorno de django es necesario abrir una terminal ya sea **cmd** de Windows o algún emulador de terminal Linux como **cmder** **https://cmder.net/** cuya instalación en Windows se cubre en el curso básico de Python previamente mencionado.  
+
 **conda activate entorno**  
 
 
