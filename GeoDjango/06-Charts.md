@@ -174,10 +174,10 @@ Con ésto obtendriamos lo siguiente en nuestra página:
 <p align="center"> 
 <img src="../img/charts.png">
 </p> 
-https://www.youtube.com/watch?v=B4Vmm3yZPgc
-1. [Documentación Charts JS][https://www.chartjs.org/samples/latest/]
-2. [Charts Django][https://simpleisbetterthancomplex.com/tutorial/2020/01/19/how-to-use-chart-js-with-django.html]
-3. [Video Django ChartJS][https://www.youtube.com/watch?v=B4Vmm3yZPgc]
-4. [Charts JS desde python][https://pypi.org/project/django-chartjs/]
+
+1. [Documentación Charts JS][https://www.chartjs.org/samples/latest/]  
+2. [Charts Django][https://simpleisbetterthancomplex.com/tutorial/2020/01/19/how-to-use-chart-js-with-django.html]  
+3. [Video Django ChartJS][https://www.youtube.com/watch?v=B4Vmm3yZPgc]  
+4. [Charts JS desde python][https://pypi.org/project/django-chartjs/]  
 
 
